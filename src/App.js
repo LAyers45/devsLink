@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Wrapper from './components/Wrapper/index'
+// Page Import
+import Onload from './Pages/Onload/OnLoad';
+import Signin from './Pages/SignIn/SignIn';
+import Signup from './Pages/SignUp/SignUp';
+import Main from './Pages/MainPage/MainPage';
+import UserPage from './Pages/UserPage/UserPage';
+import DevSearch from './Pages/DevSearch/DevSearch';
+import DevWorks from './Pages/DevWorks/DevWorks';
+import EditUser from './Pages/EditUser/EditUser';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Route exact path="/" component={Onload} />
+        <Wrapper>
+          <Route exact path="/signin" component={Signin} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/main" component={Main} />
+          <Route exact path="/user" component={UserPage} />
+          <Route exact path="/devsearch" component={DevSearch} />
+          <Route exact path="/devworks" component={DevWorks} />
+          <Route exact path="/edit" component={EditUser} />
+        </Wrapper>
+      </div>
+    </Router>
   );
 }
 
