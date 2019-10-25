@@ -1,11 +1,15 @@
 import React from "react";
 import styles from "./MainPage";
+import Navbar from '../../components/Navbar/Navbar'
 
 
 
 function MainPage() {
     return (
-        <div>MainPage</div>
+        <div>
+            <Navbar/>
+        
+            </div>
     )
 
 }

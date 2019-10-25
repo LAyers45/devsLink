@@ -1,11 +1,14 @@
 import React from "react";
-import styles from "./DevWorks";
+import Navbar from '../../components/Navbar/Navbar'
+
 
 
 
 function DevWorks() {
     return (
-        <div>DevWorks</div>
+        <div>
+            <Navbar />
+        </div>
     )
 
 }
