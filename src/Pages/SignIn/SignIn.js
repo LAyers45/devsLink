@@ -1,11 +1,16 @@
 import React from "react";
 import styles from "./SignIn";
+import Footer from '../Footer/Footer'
 
 
 
 function SignIn() {
     return (
-        <div>SignIn</div>
+
+        <div>
+            <div>SignIn</div>
+            <Footer />
+        </div>
     )
 
 }
