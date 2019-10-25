@@ -1,9 +1,35 @@
+.navbar{
+    background-color: #7D7E80;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+#logo{
+    margin-left: 50px;
+    padding: 0%;
+    margin-right: 50px;
+
+}
 a{
-    color: whitesmoke;
+    color: #add8ff;
+    font-family: 'Comfortaa', cursive;
+}
+.nav-link{
+    padding-top: 45px;
+}
+ul{
+    padding: 0;
+    margin: 0;
 }
 li{
-padding-left: 30px;
-display: block;
-text-decoration: none;
-float: right;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: block;
+    text-decoration: none;
+    float: right;
+    cursor: pointer;
+}
+li :hover{
+    color: white;
+    text-decoration: none;
 }
