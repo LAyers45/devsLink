@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./SignIn";
+import "./SignIn";
 import Footer from '../../components/Footer/Footer'
 
 

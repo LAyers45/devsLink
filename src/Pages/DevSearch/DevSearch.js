@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./DevSearch";
+import "./DevSearch";
 import Navbar from '../../components/Navbar/Navbar'
 
 
