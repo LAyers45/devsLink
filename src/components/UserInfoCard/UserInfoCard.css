@@ -1,0 +1,53 @@
+.profile-pic{
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:20px;
+    border-style: solid;
+    border-width: 5px;
+    width:350px;
+}
+
+.card{
+    height:500px;
+    left: 17.5%;
+    margin-top: 3.5%;
+    width:65%;
+    
+}
+
+.username{
+    padding-left:10px;
+    font-size:70px;
+}
+
+.github{
+    font-size:70px;
+    position:absolute;
+    right: 24%;
+}
+
+.email{
+    font-size:70px;
+    position:absolute;
+    right: 28%;
+    top:17%
+}
+
+.website{
+    font-size:70px;
+    position:absolute;
+    right: 20%;
+    top:34%
+}
+.languages{
+    font-size:70px;
+    position:absolute;
+    right: 10%;
+    top:51%
+}
+.btn{
+    width:100px;
+    position:absolute;
+    right:10%;
+    bottom:0%;
+}
