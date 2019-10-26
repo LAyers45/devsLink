@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./EditUser";
+import "./EditUser";
 import Navbar from '../../components/Navbar/Navbar'
 
 

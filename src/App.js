@@ -11,6 +11,7 @@ import UserPage from './Pages/UserPage/UserPage';
 import DevSearch from './Pages/DevSearch/DevSearch';
 import DevWorks from './Pages/DevWorks/DevWorks';
 import EditUser from './Pages/EditUser/EditUser';
+import Project from './Pages/Project/Project';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/devsearch" component={DevSearch} />
           <Route exact path="/devworks" component={DevWorks} />
           <Route exact path="/edit" component={EditUser} />
+          <Route exact path="/project" component={Project} />
         </Wrapper>
       </div>
     </Router>
