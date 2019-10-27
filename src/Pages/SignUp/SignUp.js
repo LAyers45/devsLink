@@ -6,7 +6,7 @@ import { Container, Row } from "../components/Container";
 
 
 
-class Users extends Component {
+class SignUp extends Component {
     state = {
         User: [],
         userName: "",
@@ -87,4 +87,4 @@ class Users extends Component {
     }
 }
 
-export default Users;
+export default SignUp;
