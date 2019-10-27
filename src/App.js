@@ -12,6 +12,8 @@ import DevSearch from './Pages/DevSearch/DevSearch';
 import DevWorks from './Pages/DevWorks/DevWorks';
 import EditUser from './Pages/EditUser/EditUser';
 import Project from './Pages/Project/Project';
+import CreateProject from './Pages/CreateProject/CreateProject';
+import EditProject from './Pages/EditProject/EditProject';
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
           <Route exact path="/devworks" component={DevWorks} />
           <Route exact path="/edit" component={EditUser} />
           <Route exact path="/project" component={Project} />
+          <Route exact path="/createproject" component={CreateProject} />
+          <Route exact path="/editproject" component={EditProject} />
         </Wrapper>
       </div>
     </Router>
