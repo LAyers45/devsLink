@@ -1,13 +1,13 @@
 .navbar{
-    background-color: #7D7E80;
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 0;
 }
-#logo{
-    margin-left: 50px;
-    padding: 0%;
-    margin-right: 50px;
+.App-logo{
+    width:10%;
+    height: 10%;
+    margin-top: 15px;
+    float: left;
 
 }
 a{
@@ -32,4 +32,7 @@ li{
 li :hover{
     color: white;
     text-decoration: none;
+}
+#project{
+margin-right: 50%;
 }

@@ -1,0 +1,15 @@
+.logo{
+    margin-top: 65px;
+    margin-left: 50px;
+    padding: 0%;
+    width: 300px;
+    top: 0;
+    z-index: 1;
+    position: fixed;
+}
+.backgroundImage{
+    position: relative;
+    margin-left: 50%;
+    width: 50%;
+    margin-bottom: 5%
+}
