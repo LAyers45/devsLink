@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./SignIn";
-import Footer from '../Footer/Footer'
+import "./SignIn";
+import Footer from '../../components/Footer/Footer'
 
 
 

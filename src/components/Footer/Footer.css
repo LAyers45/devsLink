@@ -3,15 +3,18 @@
     color:#282c34;
     font-size: 20px;
     bottom:0;
-  }
-  
-  .footer span {
-    font-family: 'Josefin Sans', sans-serif;
     position: absolute;
-    color:#add8ff;
-    bottom: 0;
+    bottom:0;
     left: 0;
     right: 0;
     padding: 3px;
     background:#7D7E80;
+    text-align: center;
+  }
+  
+  span {
+    font-family: 'Josefin Sans', sans-serif;
+  
+    color:#add8ff;
+   
   }

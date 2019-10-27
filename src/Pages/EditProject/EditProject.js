@@ -1,17 +1,20 @@
 import React from "react";
-import "./MainPage";
+import "./EditProject";
 import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 
 
 
-function MainPage() {
+
+function EditProject() {
     return (
         <div>
             <Navbar />
 
+            <Footer />
         </div>
     )
 
 }
 
-export default MainPage;
+export default EditProject;

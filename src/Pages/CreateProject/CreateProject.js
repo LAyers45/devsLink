@@ -1,17 +1,20 @@
 import React from "react";
-import "./MainPage";
+import "./CreateProject";
 import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 
 
 
-function MainPage() {
+
+function CreateProject() {
     return (
         <div>
             <Navbar />
 
+            <Footer />
         </div>
     )
 
 }
 
-export default MainPage;
+export default CreateProject;
