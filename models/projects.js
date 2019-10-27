@@ -23,30 +23,17 @@ var ProjectSchema = new Schema({
         trim: true,
         required: "Host is Required",
     },
-    // `email` must be of type String
-    // `email` must be unique
-    // `email` must match the regex pattern below and throws a custom error message if it does not
-    // You can read more about RegEx Patterns here https://www.regexbuddy.com/regex.html
-    dev1: {
-        type: String,
-        unique: true
-    },
-    // `date` must be of type Date. The default value is the current date
-    dev2: {
-        type: String,
-        unique: true
-    },
-    dev3: {
-        type: String,
-        unique: true
-    },
-    projectImage:
-    {
-        data: Buffer, contentType: String
-    },
     description:
     {
         type: String
+    },
+    languages:
+    {
+        type: String
+    },
+    availability:
+    {
+        type: Boolean
     }
 
 });
