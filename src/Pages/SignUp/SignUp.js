@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./SignUp";
-import "./Signup.css";
-import API from "../utils/API";
-import { Container, Row } from "../components/Container";
+import "./SignUp.css";
+import API from "../../utils/API";
+import { Container, Row } from "../../components/Container/Container";
+import { Input, TextArea, FormBtn } from "../../components/Form";
 
 
 
@@ -21,7 +21,7 @@ class SignUp extends Component {
     loadUser = () => {
         API.getUser()
             .then(res =>
-                this.setState({ books: res.data, userName: "", email: "", password: "" })
+                this.setState({ User: res.data, userName: "", email: "", password: "" })
             )
             .catch(err => console.log(err));
     };
@@ -61,7 +61,7 @@ class SignUp extends Component {
                             placeholder="User Name (required)"
                         />
                         <Input
-                            value={this.state.eamil}
+                            value={this.state.email}
                             onChange={this.handleInputChange}
                             email="email"
                             placeholder="Email (required)"
