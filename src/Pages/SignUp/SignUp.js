@@ -9,22 +9,22 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 class SignUp extends Component {
     state = {
         User: [],
-        userName: "",
+        username: "",
         email: "",
         password: ""
     };
 
-    componentDidMount() {
-        this.loadUser();
-    }
+    // componentDidMount() {
+    // this.loadUser();
+    // }
 
-    loadUser = () => {
-        API.getUser()
-            .then(res =>
-                this.setState({ User: res.data, userName: "", email: "", password: "" })
-            )
-            .catch(err => console.log(err));
-    };
+    // loadUser = () => {
+    //     API.saveUser()
+    //         .then(res =>
+    //             this.setState({ User: res.data, username: "", email: "", password: "" })
+    //         )
+    //         .catch(err => console.log(err));
+    // };
 
 
     handleInputChange = event => {
@@ -36,13 +36,13 @@ class SignUp extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        if (this.state.userName && this.state.email && this.state.password) {
+        if (this.state.username && this.state.email && this.state.password) {
             API.saveUser({
-                userName: this.state.userName,
+                username: this.state.username,
                 email: this.state.email,
                 password: this.state.password
             })
-                .then(res => this.loadUsers())
+                .then(res => this.loadUser())
                 .catch(err => console.log(err));
         }
     };
@@ -55,9 +55,9 @@ class SignUp extends Component {
 
                     <form>
                         <Input
-                            value={this.state.userName}
+                            value={this.state.username}
                             onChange={this.handleInputChange}
-                            userName="User Name"
+                            username="User Name"
                             placeholder="User Name (required)"
                         />
                         <Input
@@ -74,7 +74,7 @@ class SignUp extends Component {
                         />
 
                         <FormBtn
-                            disabled={!(this.state.userName && this.state.email && this.state.password)}
+                            disabled={!(this.state.username && this.state.email && this.state.password)}
                             onClick={this.handleFormSubmit}
                         >
                             Create User Profile
