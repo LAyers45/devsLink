@@ -3,21 +3,14 @@
   margin: 0;
   padding: 0;
   background-image: linear-gradient(#282c34, #add8ff);
+  height: 100vmax;
+  overflow: hidden;
 }
 
 .App-logo {
   height: 100vmax;
 }
 
-.App-header {
-  background-color: #7D7E80;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+
 
 

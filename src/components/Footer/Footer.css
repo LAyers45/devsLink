@@ -1,20 +1,17 @@
 .footer {
     min-height: 30px;
-    color:#282c34;
     font-size: 20px;
     bottom:0;
-    position: absolute;
+    position: fixed;
     bottom:0;
     left: 0;
     right: 0;
     padding: 3px;
-    background:#7D7E80;
     text-align: center;
   }
   
   span {
-    font-family: 'Josefin Sans', sans-serif;
-  
-    color:#add8ff;
+    font-family: 'Open Sans', sans-serif;
+    color:#282c34;
    
   }
