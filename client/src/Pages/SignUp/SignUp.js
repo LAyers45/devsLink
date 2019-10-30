@@ -11,7 +11,7 @@ import { GithubLoginButton } from "react-social-login-buttons";
 
 class SignUp extends Component {
     state = {
-        User: [],
+        user: [],
         username: "",
         email: "",
         password: ""
@@ -62,6 +62,7 @@ class SignUp extends Component {
                 <FormGroup>
                     <Label>User Name</Label>
                     <Input
+                        name="username"
                         value={this.state.username}
                         onChange={this.handleInputChange}
                         type="User Name"
@@ -69,6 +70,7 @@ class SignUp extends Component {
                     />
                     <Label>Email</Label>
                     <Input
+                        name="email"
                         value={this.state.email}
                         onChange={this.handleInputChange}
                         type="email"
@@ -76,6 +78,7 @@ class SignUp extends Component {
                     />
                     <Label>Password</Label>
                     <Input
+                        name="password"
                         value={this.state.password}
                         onChange={this.handleInputChange}
                         type="password"
