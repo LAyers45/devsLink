@@ -1,6 +1,7 @@
 import React from 'react';
-import './Navbar.css';
 import logo from '../../images/devs-link-logo.png';
+import './Navbar.css';
+
 
 export default function navbar() {
     return (
