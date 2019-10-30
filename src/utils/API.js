@@ -8,6 +8,6 @@ export default {
     return axios.get("/api/userpage/" + username);
   },
   saveUser: function (userData) {
-    return axios.post("/api/signup", userData);
+    return axios.post("/api/user", userData);
   }
 };
