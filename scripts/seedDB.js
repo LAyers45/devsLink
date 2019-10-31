@@ -35,7 +35,7 @@ const userSeed = [
     specialization: "javascript",
     image: ""
 
-  },
+  }
 ];
 
 db.Book
