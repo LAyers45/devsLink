@@ -21,13 +21,13 @@ class SignUp extends Component {
     // this.loadUser();
     // }
 
-    // loadUser = () => {
-    //     API.saveUser()
-    //         .then(res =>
-    //             this.setState({ User: res.data, username: "", email: "", password: "" })
-    //         )
-    //         .catch(err => console.log(err));
-    // };
+    loadUser = () => {
+        API.saveUser()
+            .then(res =>
+                this.setState({ User: res.data, username: "", email: "", password: "" })
+            )
+            .catch(err => console.log(err));
+    };
 
 
     handleInputChange = event => {

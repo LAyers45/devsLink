@@ -12,6 +12,7 @@ var UserSchema = new Schema({
     username: {
         type: String,
         trim: true,
+        unique: true,
         required: "Username is Required"
     },
     // `password` must be of type String
@@ -36,7 +37,7 @@ var UserSchema = new Schema({
     email: {
         type: String,
         unique: true,
-        required: "Password is Required",
+        required: "email is Required",
         match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
     },
     // `date` must be of type Date. The default value is the current date
