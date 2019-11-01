@@ -85,7 +85,7 @@ class SignUp extends Component {
                         placeholder="Password (required)"
                     />
 
-                    <button className="btn-lg btn-dark btn-block" id="signupbtn"
+                    <button className="btn-lg btn-dark btn-block"
                         disabled={!(this.state.username && this.state.email && this.state.password)}
                         onClick={this.handleFormSubmit}
                     >
