@@ -1,0 +1,25 @@
+
+.logoMultiple{
+    margin-left:3;
+    padding: 0;
+    max-width: 100%;
+    position: fixed;
+    overflow-x: hidden;
+}
+.cards{
+      z-index: 1;
+    padding: 1%;
+    margin-top: 11%;
+}
+#cardSearch{
+  
+}
+#cardWorks{
+
+}
+#cardUser{
+ 
+}
+#cardProject{
+  
+}
