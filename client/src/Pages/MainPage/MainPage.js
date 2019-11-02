@@ -12,12 +12,14 @@ import { Container, Row, Col } from 'reactstrap';
 
 
 
-
-
 function MainPage() {
     return (
-        <div>
+
+        < div >
+
             <Navbar />
+            <img src={BackgroundImage} className="backgroundImage" alt=" devs link" />
+
             <Container fluid>
                 <Row>
                     <Col lg="12">
@@ -28,8 +30,9 @@ function MainPage() {
                     </Col>
                 </Row>
             </Container>
+
             <Footer />
-        </div>
+        </div >
     )
 
 }

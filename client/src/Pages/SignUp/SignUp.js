@@ -21,15 +21,20 @@ class SignUp extends Component {
     };
 
     // componentDidMount() {
-    // this.loadUser();
+    //     this.loadUser();
     // }
 
     loadUser = () => {
         API.saveUser()
+        let loggedin = false
             .then(res =>
-                this.setState({ User: res.data, username: "", email: "", password: "" })
+                this.setState({ User: res.data, username: "", email: "", password: "" }),
+                document.location.href = "/main",
+                loggedin = true,
+                console.log(loggedin)
             )
             .catch(err => console.log(err));
+
     };
 
 
@@ -49,7 +54,8 @@ class SignUp extends Component {
                 password: this.state.password
             })
                 .then(res => this.loadUser())
-                .catch(err => console.log(err));
+
+                .catch(err => alert("error"));
         }
     };
 
@@ -92,6 +98,7 @@ class SignUp extends Component {
                             onClick={this.handleFormSubmit}
                         >
                             Create User Profile
+
                     </button>
                         <div className="gitText text-center pt-3">
                             Or Use GitHub
