@@ -1,20 +1,48 @@
+h1{
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: #add8ff;
+}
+label{
+    font-family: 'Comfortaa', cursive;
+    color: #add8ff;
+    padding-top: 2%;
+}
 .signup-form{
     position: fixed;
-    background-color: #add8ff;
-    width: 50%;
+    background-image: linear-gradient(#282c34, #add8ff);
+    width: 45%;
     padding: 50px;
     margin-top: 10%;
-    margin-left: 25%;
-    height: 65%;
+    height: 75%;
     border-radius: 15px;
+    left:28%;
 }
-
-.form-group{
-    margin: 0%;
-    padding: 0;
-}
-
 #signupbtn{
-    margin-top: 5px ;
-    color: red ;            
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    background-color:rgb(51, 51, 51);   
+    margin-top: 3%; 
+    text-align: start;
+}
+input{
+    font-family: 'Comfortaa', cursive;
+}
+.gitText{
+    font-family: 'Comfortaa', cursive;
+    color: #282c34;
+    font-family: 'Open Sans', sans-serif;
+}
+.backButton{
+    box-shadow:0 0 6px #add8ff;
+    cursor: pointer;
+    position: fixed;
+    font-family: 'Comfortaa', cursive;
+    background-image: linear-gradient(#add8ff, #6c839b);
+    margin-left: 30%;
+    margin-top: 12%;    
+    color:white;
+    border: none;
+    border-radius: 80px;
+    padding: 5px;
 }
