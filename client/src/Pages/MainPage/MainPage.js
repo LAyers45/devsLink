@@ -13,12 +13,14 @@ import { Container, Row, Col } from 'reactstrap';
 
 
 
-
-
 function MainPage() {
     return (
-        <div>
+
+        < div >
+
             <Navbar />
+            <img src={BackgroundImage} className="backgroundImage" alt=" devs link" />
+
             <Container fluid>
                 <Row>
                     <img src={LogoMultiple} className="logoMultiple" alt="logo multiple" />
@@ -30,8 +32,9 @@ function MainPage() {
                     </Col>
                 </Row>
             </Container>
+
             <Footer />
-        </div>
+        </div >
     )
 
 }
