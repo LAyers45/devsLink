@@ -3,14 +3,12 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-
     username: {
         type: String,
         trim: true,
         unique: true,
         required: "Username is Required"
     },
-
     password: {
         type: String,
         trim: true,
@@ -22,7 +20,6 @@ var UserSchema = new Schema({
             "Password should be longer."
         ]
     },
-
     email: {
         type: String,
         unique: true,
@@ -43,8 +40,6 @@ var UserSchema = new Schema({
     }
 });
 
-
 var User = mongoose.model("User", UserSchema);
-
 
 module.exports = User;

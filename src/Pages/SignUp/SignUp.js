@@ -18,21 +18,16 @@ class SignUp extends Component {
     };
 
     // componentDidMount() {
-    //     this.loadUser();
+    // this.loadUser();
     // }
 
-    loadUser = () => {
-        API.saveUser()
-        let loggedin = false
-            .then(res =>
-                this.setState({ User: res.data, username: "", email: "", password: "" }),
-                document.location.href = "/main",
-                loggedin = true,
-                console.log(loggedin)
-            )
-            .catch(err => console.log(err));
-
-    };
+    // loadUser = () => {
+    //     API.saveUser()
+    //         .then(res =>
+    //             this.setState({ User: res.data, username: "", email: "", password: "" })
+    //         )
+    //         .catch(err => console.log(err));
+    // };
 
 
     handleInputChange = event => {
@@ -51,13 +46,15 @@ class SignUp extends Component {
                 password: this.state.password
             })
                 .then(res => this.loadUser())
-
-                .catch(err => alert("error"));
+                .catch(err => console.log(err));
         }
     };
 
     render() {
         return (
+
+
+
 
 
             <Form className="signup-form">
@@ -88,7 +85,7 @@ class SignUp extends Component {
                         placeholder="Password (required)"
                     />
 
-                    <button className="btn-lg btn-dark btn-block" id="signupbtn"
+                    <button className="btn-lg btn-dark btn-block"
                         disabled={!(this.state.username && this.state.email && this.state.password)}
                         onClick={this.handleFormSubmit}
                     >
