@@ -1,9 +1,9 @@
-h1{
+#signup-h1{
     font-family: 'Comfortaa', cursive;
     font-weight: bold;
     color: #add8ff;
 }
-label{
+.signup-label{
     font-family: 'Comfortaa', cursive;
     color: #add8ff;
     padding-top: 2%;
@@ -25,7 +25,7 @@ label{
     margin-top: 3%; 
     text-align: start;
 }
-input{
+.signup-input{
     font-family: 'Comfortaa', cursive;
 }
 .gitText{

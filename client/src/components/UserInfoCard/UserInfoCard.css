@@ -7,11 +7,12 @@
     width:350px;
 }
 
-.card{
+#edit-user-card{
+    
     height:500px;
     left: 17.5%;
     margin-top: 3.5%;
-    width:65%;
+    width:800px;
     
 }
 
@@ -45,7 +46,7 @@
     right: 10%;
     top:51%
 }
-.btn{
+#edit-btn{
     width:100px;
     position:absolute;
     right:10%;

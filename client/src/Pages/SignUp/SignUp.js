@@ -66,26 +66,26 @@ class SignUp extends Component {
 
 
                 <Form className="signup-form">
-                    <h1 className="text-center">Sign Up To DevsLink</h1>
+                    <h1 className="text-center" id="signup-h1">Sign Up To DevsLink</h1>
                     <FormGroup>
-                        <Label>User Name</Label>
-                        <Input
+                        <Label className="signup-label">User Name</Label>
+                        <Input className="signup-input"
                             name="username"
                             value={this.state.username}
                             onChange={this.handleInputChange}
                             type="User Name"
                             placeholder="User Name (required)"
                         />
-                        <Label>Email</Label>
-                        <Input
+                        <Label className="signup-label">Email</Label>
+                        <Input className="signup-input"
                             name="email"
                             value={this.state.email}
                             onChange={this.handleInputChange}
                             type="email"
                             placeholder="Email (required)"
                         />
-                        <Label>Password</Label>
-                        <Input
+                        <Label className="signup-label">Password</Label>
+                        <Input className="signup-input"
                             name="password"
                             value={this.state.password}
                             onChange={this.handleInputChange}

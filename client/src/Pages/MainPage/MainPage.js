@@ -18,7 +18,6 @@ function MainPage() {
         < div >
 
             <Navbar />
-            <img src={BackgroundImage} className="backgroundImage" alt=" devs link" />
 
             <Container fluid>
                 <Row>
