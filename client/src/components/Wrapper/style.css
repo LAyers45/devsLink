@@ -1,4 +1,6 @@
 .wrapper {
+  background-image: url(../../images/logo-multiple.png);
   min-height: 100%;
   padding-bottom: 100px;
+  
 }

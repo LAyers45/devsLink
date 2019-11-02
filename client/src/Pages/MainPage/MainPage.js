@@ -2,7 +2,6 @@ import React from "react";
 import "./Main.css";
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
-import LogoMultiple from '../../images/logo-multiple.png';
 import DevSearch from '../../images/dev-search.png';
 import DevWorks from '../../images/dev-works.png';
 import UserProfile from '../../images/user-profile.png';
@@ -23,12 +22,11 @@ function MainPage() {
 
             <Container fluid>
                 <Row>
-                    <img src={LogoMultiple} className="logoMultiple" alt="logo multiple" />
                     <Col lg="12">
-                        <img src={DevSearch} className="cards" id="cardSearch" alt="dev search" />
-                        <img src={DevWorks} className="cards" id="cardWorks" alt="dev works" />
-                        <img src={UserProfile} className="cards" id="cardUser" alt="profile" />
-                        <img src={Project} className="cards" id="cardProject" alt="project" />
+                        <a href="/devsearch"> <img src={DevSearch} className="cards" id="cardSearch" alt="dev search" /></a>
+                        <a href="/devworks"> <img src={DevWorks} className="cards" id="cardWorks" alt="dev works" /></a>
+                        <a href="/user">  <img src={UserProfile} className="cards" id="cardUser" alt="profile" /></a>
+                        <a href="/project">  <img src={Project} className="cards" id="cardProject" alt="project" /></a>
                     </Col>
                 </Row>
             </Container>

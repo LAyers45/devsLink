@@ -1,15 +1,40 @@
 .navbar{
     position: fixed;
     z-index: 1;
+    height: 10vh;
+}
+ul{
+    display: flex;
+    width: 30%;
+    height: 100%;
+}
+li{
+    width: 50vw;
+    text-decoration: none;
+    list-style: none;
+    align-content: center;
 }
 .App-logo{
-    position: relative;
-    width:10%;
-    height: 1%;
-    margin-top: 2.25%;
-    margin-left: 1%;
-    float: left;
-    cursor: pointer;
+    width:80%;
+    height: 120%;;
+    text-decoration: none;
+    list-style: none;
+    transition: 0.5s ease
+}
+.App-logo:hover{
+    transform: scale(1.2);
+}
+#searchLink{
+    margin-top: 3%;
+}
+#worksLink{
+    margin-top: 3%;
+}
+#profileLink{
+    margin-top: 3%;
+}
+#projectLink{
+    margin-top: 3%;
 }
 a{
     cursor: pointer;
@@ -20,15 +45,5 @@ a:hover{
     color: white;
     text-decoration: none;
 }
-.nav-link{
-   margin-top: 4%;
-   padding-left: 1rem;
-}
-li{
-    display: block;
-    text-decoration: none;
-    float: right;
-}
-#project{
-    margin-right: 48%;
-}
+
+
