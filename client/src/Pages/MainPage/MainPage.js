@@ -6,15 +6,16 @@ import BackgroundImage from '../../images/background-devslink.png';
 
 
 
-
-
 function MainPage() {
     return (
-        <div>
+
+        < div >
+
             <Navbar />
+
             <img src={BackgroundImage} className="backgroundImage" alt=" devs link" />
             <Footer />
-        </div>
+        </div >
     )
 
 }
