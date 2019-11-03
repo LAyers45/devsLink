@@ -113,6 +113,7 @@ class SignUp extends Component {
                                 </button>
                                             <div className="gitText text-center pt-3">
                                                 Or Use GitHub
+
                             </div>
                                             <GithubLoginButton className="mt-3 mb-3"></GithubLoginButton>
                                         </FormGroup>
