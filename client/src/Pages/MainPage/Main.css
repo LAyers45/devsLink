@@ -1,10 +1,27 @@
 .cards{
-    padding: 1%;
-    margin-top: 11%;
+    padding: .5%;
+    margin: auto;
     animation: card 1250ms ease forwards;
-    transition: 0.5s ease
+    transition: 0.5s ease;
+    margin-top: 7%;
 }
 @keyframes card{
     from{ transform: translateX(-300%)}
     to{transform: translateX(3%)}
 }
+@media only screen and (max-width: 1025px) {
+    .cards{
+        width: 30%;
+        padding: .5%;
+        margin-top: 13%;
+        margin-left: 13%;
+    }
+  }
+@media only screen and (max-width: 600px) {
+    .cards{
+        width: 40%;
+        padding: .5%;
+        margin-top: 21%;
+        margin-left: 6%;
+    }
+  }

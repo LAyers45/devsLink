@@ -6,12 +6,6 @@
     position: fixed;
     width: 20%;
 }
-.backgroundImage{
-    position: fixed;
-    width: 55%;
-    right:7%;
-    top:22%;
-}
 .signIn{
     box-shadow:0 0 6px #add8ff;
     cursor: pointer;
@@ -19,7 +13,7 @@
     font-family: 'Comfortaa', cursive;
     background-image: linear-gradient(#add8ff, #6c839b);
     margin-left: 5%;
-    margin-top: 46%;    
+    margin-top: 43%;    
     color:white;
     border: none;
     border-radius: 80px;
@@ -34,7 +28,7 @@
     font-family: 'Comfortaa', cursive;
     background-image: linear-gradient(#add8ff, #6c839b);
     margin-left: 20%;
-    margin-top: 46%;    
+    margin-top: 43%;    
     color:white;
     border: none;
     border-radius: 80px;
@@ -67,22 +61,159 @@
     font-weight: bolder;
     letter-spacing: 1px;
 }
+.backgroundImage{
+    position: fixed;
+    width: 55%;
+    float: right;
+    top: 20%;
+    right:5%;
+}
 .devs{
     animation-duration: 1s;
     animation-delay: 1s;
     animation-iteration-count: initial;
-    width: 150px;
-    right: 14%;
-    bottom: 10%;
+    width: 14%;
+    z-index: 1;
+    float: right;
     position: fixed;
+    top: 60%;
+    right:12%;
 }
 .mail{
     animation-duration: 1s;
     animation-delay: 2.25s;
     animation-iteration-count: initial;
-    width: 150px;
-    right: 30%;
-    top: 14%;
+    width: 14%;
+    z-index: 1;
+    float: right;
     position: fixed;
-    color: #6c839b;
+    top: 11%;
+    right:28%;
 }
+@media only screen and (max-width: 1025px) {
+    .logo{
+        width: 30%;
+    }
+    .textOne{
+        width: 36%;
+        font-size: 2.5rem;
+        margin-left: 5%;
+        margin-top: 75%;
+        line-height: 120%;
+        letter-spacing: 1px;
+    }
+    .textTwo{
+        width: 36%;
+        font-size: 2.5rem;
+        margin-left: 5%;
+        margin-top: 110%;
+        line-height: 120%;
+        font-weight: bolder;
+        letter-spacing: 1px;
+    }
+    .backgroundImage{
+        width: 90%;
+        top: 10%;
+        right:5%;
+    }
+    .signIn{
+        margin-left: 50%;
+        margin-top: 100%;    
+        width: 145px;
+    }
+    .signUp{
+        margin-left: 70%;
+        margin-top: 100%;    
+        width: 145px;
+    }
+    .mail{
+        top: 7%;
+        right:40%;
+    }
+    .devs{
+        top: 40%;
+        right:22%;
+    }
+  }
+@media only screen and (max-width: 600px) {
+    .logo{
+        width: 30%;
+    }
+    .textOne{
+        width: 36%;
+        font-size: 1rem;
+        margin-left: 5%;
+        margin-top: 80%;
+        line-height: 120%;
+        letter-spacing: 1px;
+    }
+    .textTwo{
+        width: 36%;
+        font-size: 1rem;
+        margin-left: 5%;
+        margin-top: 125%;
+        line-height: 120%;
+        font-weight: bolder;
+        letter-spacing: 1px;
+    }
+    .backgroundImage{
+        width: 90%;
+        top: 10%;
+        right:5%;
+    }
+    .signIn{
+        margin-left: 5%;
+        margin-top: 150%;    
+        width: 145px;
+    }
+    .signUp{
+        margin-left: 50%;
+        margin-top: 150%;    
+        width: 145px;
+    }
+    .mail{
+        top: 7%;
+        right:40%;
+    }
+    .devs{
+        top: 40%;
+        right:22%;
+    }
+  }
+  @media only screen and (max-width: 376px) {
+    .logo{
+        width: 30%;
+    }
+    .textOne{
+        width: 80%;
+        font-size: 1.5rem;
+        margin-left: 5%;
+        margin-top: 100%;
+      
+    }
+    .textTwo{
+        width: 80%;
+        font-size: 1.5rem;
+        margin-left: 5%;
+        margin-top: 145%;
+    }
+    .backgroundImage{
+        width: 90%;
+        top: 10%;
+        right:5%;
+    }
+    .signIn{
+        margin-left: 5%;
+        margin-top: 165%;    
+        width: 145px;
+    }
+    .signUp{
+        margin-left: 50%;
+        margin-top: 165%;    
+        width: 145px;
+    }
+    .devs{
+        top: 35%;
+        right:22%;
+    }
+  }

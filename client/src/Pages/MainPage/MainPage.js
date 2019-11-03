@@ -18,10 +18,9 @@ function MainPage() {
         < div >
 
             <Navbar />
-
             <Container fluid>
                 <Row>
-                    <Col lg="12">
+                    <Col>
                         <a href="/devsearch"> <img src={DevSearch} className="cards" id="cardSearch" alt="dev search" /></a>
                         <a href="/devworks"> <img src={DevWorks} className="cards" id="cardWorks" alt="dev works" /></a>
                         <a href="/user">  <img src={UserProfile} className="cards" id="cardUser" alt="profile" /></a>

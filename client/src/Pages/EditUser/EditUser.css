@@ -1,0 +1,102 @@
+.profile-pic{
+    width: 80%;
+    }
+    .card{
+        cursor:default;
+        position: fixed;
+        background-image: linear-gradient(#282c34, #add8ff);
+        width: 45%;
+        padding: 5%;
+        height: 65%;
+        border-radius: 15px;
+        top: 20%;
+        left:28%;
+        border: none;
+    }
+    .username{
+        width: 85%;
+        font-family: 'Comfortaa', cursive;
+        font-size: 2em;
+        margin-left: 2%;
+        font-weight: bold;
+        color: #add8ff;
+    }
+    .github{
+        font-family: 'Comfortaa', cursive;
+        font-size: 1em;
+        color: #add8ff;
+    }
+    .email{
+        font-family: 'Comfortaa', cursive;
+        font-size: 1em;
+        color: #add8ff;
+    }
+    .website{
+        font-family: 'Comfortaa', cursive;
+        font-size: 1em;
+        color: #add8ff;
+    }
+    .languages{
+        font-family: 'Comfortaa', cursive;
+        font-size: 1em;
+        color: #add8ff;
+    }
+    .user-card-span{
+        font-family: 'Open Sans', sans-serif;
+    }
+    #buttonSaveInfo{
+        border-color: #dc3545;
+        background-color: #dc3545;
+        cursor: pointer;
+        margin-top: 10%;
+        width:25%;
+        float: right;
+    }
+    .user-card-respoonsive-col-info{
+        margin-top: 0%;
+    }
+    .user-card-respoonsive-col-pic{
+        margin-top: 0%;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .profile-pic{
+            width: 110%;
+            }
+        .card{
+            width: 95%;
+            padding: 5%;
+            height: 55%;
+            top: 20%;
+            left:2.5%;
+        }
+        .username{
+            font-size: 1.5em;
+            margin-left: 4%;
+        }
+        .github{
+            font-size: 1em;
+        }
+        .email{
+            font-size: 1em;
+        }
+        .website{
+            font-size: 1em;
+        }
+        .languages{
+            font-family: 'Comfortaa', cursive;
+            font-size: 1em;
+            color: #add8ff;
+        }
+        .user-card-respoonsive-col-info{
+            margin-top: 5%;
+        }
+        .user-card-respoonsive-col-pic{
+            margin-top: 5%;
+        }
+        .btn{
+            margin-top: 18%;
+            width:25%;
+            float: right;
+        }
+      }

@@ -9,11 +9,12 @@ import Footer from '../../components/Footer/Footer'
 
 function UserPage() {
     return (
-        <div>
+        <React.Fragment>
             <Navbar />
             <UserInfoCard />
             <Footer />
-        </div>
+        </React.Fragment>
+
     )
 
 }

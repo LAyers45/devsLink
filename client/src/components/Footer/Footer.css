@@ -1,4 +1,5 @@
 .footer {
+    cursor: default;
     min-height: 30px;
     font-size: 20px;
     bottom:0;
@@ -9,9 +10,8 @@
     padding: 3px;
     text-align: center;
   }
-  
-  span {
+  span 
+  {
     font-family: 'Open Sans', sans-serif;
     color:#282c34;
-   
   }
