@@ -1,22 +1,31 @@
 .navbar{
     position: fixed;
     z-index: 1;
+    width: 100vw;
     height: 10vh;
 }
 ul{
-    display: flex;
-    width: 30%;
-    height: 100%;
-}
-li{
-    width: 50vw;
+    width: 100vw;
     text-decoration: none;
     list-style: none;
-    align-content: center;
+    display: flex;
+}
+li{
+    width: 100vw;
+}
+#searchLink{
+    margin-top: 1.5%
+}
+#worksLink{
+    margin-top: 1.5%
+}#profileLink{
+    margin-top: 1.5%
+}#projectLink{
+    margin-top: 1.5%
 }
 .App-logo{
-    width:80%;
-    height: 120%;;
+    width:100px;
+    height:40px;
     text-decoration: none;
     list-style: none;
     transition: 0.5s ease
@@ -24,26 +33,14 @@ li{
 .App-logo:hover{
     transform: scale(1.2);
 }
-#searchLink{
-    margin-top: 3%;
-}
-#worksLink{
-    margin-top: 3%;
-}
-#profileLink{
-    margin-top: 3%;
-}
-#projectLink{
-    margin-top: 3%;
-}
-a{
+.anchor-nav{
     cursor: pointer;
     color: #add8ff;
     font-family: 'Comfortaa', cursive;
 }
-a:hover{
-    color: white;
+.anchor-nav:hover{
     text-decoration: none;
+    color: white
 }
 
 

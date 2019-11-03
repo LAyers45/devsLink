@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import "./EditUser";
+import "../../Pages/EditUser/EditUser.css";
 import API from "../../utils/API";
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 // import { Input, TextArea, FormBtn } from "../../components/Form";
-import { Form, Button, FormGroup, Label, Input } from 'reactstrap';
+import { Container, Row, Col, Form, Button, FormGroup, Label, Input } from 'reactstrap';
+import profilePic from '../../images/default-profile-pic.png'
+
 
 
 class EditUser extends Component {
@@ -20,46 +22,46 @@ class EditUser extends Component {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <Navbar />
-                <Form className="signup-form">
-                    <h1 className="text-center">Sign Up To DevsLink</h1>
-                    <FormGroup>
-                        <Label>User Name</Label>
-                        <Input
-                            name="username"
-                            value={this.state.username}
-                            onChange={this.handleInputChange}
-                            type="User Name"
-                            placeholder="User Name (required)"
-                        />
-                        <Label>Email</Label>
-                        <Input
-                            name="email"
-                            value={this.state.email}
-                            onChange={this.handleInputChange}
-                            type="email"
-                            placeholder="Email (required)"
-                        />
-                        <Label>Password</Label>
-                        <Input
-                            name="password"
-                            value={this.state.password}
-                            onChange={this.handleInputChange}
-                            type="password"
-                            placeholder="Password (required)"
-                        />
-
-                        <Button className="btn-lg btn-dark btn-block"
-                            disabled={!(this.state.username && this.state.email && this.state.password)}
-                            onClick={this.handleFormSubmit}
-                        >
-                            Create User Profile
-                            </Button>
-                    </FormGroup>
-                </Form>
-                <Footer />
-            </div>
+                <Container>
+                    <Row>
+                        <Col>
+                            <Form className="card">
+                                <FormGroup>
+                                    <Row>
+                                        <Col className="user-card-respoonsive-col-pic">
+                                            <img src={profilePic} className="profile-pic" alt="profile-pic" />
+                                            <div className="username">
+                                                Username
+                                    </div>
+                                        </Col>
+                                        <Col className="user-card-respoonsive-col-info">
+                                            <span className="user-card-span">Email:</span>
+                                            <Input className="email" placeholder="email@gmail.com">
+                                            </Input>
+                                            <span className="user-card-span">Github:</span>
+                                            <Input className="github" placeholder="Your Github">
+                                            </Input>
+                                            <span className="user-card-span">Website:</span>
+                                            <Input className="website" placeholder="Yourwebsite.com">
+                                            </Input>
+                                            <span className="user-card-span">Programming Languages:</span>
+                                            <Input className="languages" placeholder="Proficient Languages">
+                                            </Input>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col className="user-card-respoonsive-col-button">
+                                            <Button id="buttonSaveInfo" role="button" >Save</Button>
+                                        </Col>
+                                    </Row>
+                                </FormGroup>
+                            </Form>
+                        </Col>
+                    </Row>
+                </Container>
+            </React.Fragment>
         )
 
     }
