@@ -1,18 +1,11 @@
 import React, { Component } from "react";
 import "./SignUp.css";
 import API from "../../utils/API";
-//import { Container, Row } from "../../components/Container/Container";
-//import { Input, TextArea, FormBtn } from "../../components/Form";
-import { Container, Row, Col, Form, Button, FormGroup, Label, Input } from 'reactstrap';
+import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import { GithubLoginButton } from "react-social-login-buttons";
 import Footer from '../../components/Footer/Footer';
 
-
-
-
 // npm install bootstrap reactstrap react-social-login-buttons
-
-
 
 class SignUp extends Component {
     state = {
@@ -30,9 +23,7 @@ class SignUp extends Component {
         API.saveUser()
             .then(res =>
                 this.setState({ User: res.data, username: "", email: "", password: "" }),
-                // console.log(this.state),
-                document.location.href = "/main"
-
+                document.location.href = "/main",
             )
             .catch(err => console.log(err));
 

@@ -13,10 +13,10 @@ width: 80%;
     left:28%;
     border: none;
 }
-.username{
+.username-info-card{
     width: 85%;
     font-family: 'Comfortaa', cursive;
-    font-size: 2em;
+    font-size: 1.5em;
     margin-left: 2%;
     font-weight: bold;
     color: #add8ff;
@@ -67,10 +67,14 @@ width: 80%;
         top: 20%;
         left:2.5%;
     }
-    .username{
-        font-size: 1.5em;
-        margin-left: 4%;
-    }
+    .username-info-card{
+    width: 85%;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.5em;
+    margin-left: 2%;
+    font-weight: bold;
+    color: #add8ff;
+}
     .github{
         font-size: 1em;
     }

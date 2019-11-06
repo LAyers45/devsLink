@@ -1,0 +1,70 @@
+
+.signin-form{
+    cursor: default;
+    position: fixed;
+    background-image: linear-gradient(#282c34, #add8ff);
+    width: 45%;
+    padding: 2%;
+    border-radius: 15px;
+    top: 3%;
+    left:28%;
+}
+.backButton{
+    box-shadow:0 0 6px #add8ff;
+    cursor: pointer;
+    font-family: 'Comfortaa', cursive;
+    background-image: linear-gradient(#add8ff, #6c839b);  
+    color:white;
+    border: none;
+    border-radius: 80px;
+    padding: 2%;
+    float: left;
+}
+.text-center{
+    font-family: 'Comfortaa', cursive;
+    font-size: 2em;
+    font-weight: bold;
+    color: #add8ff;
+    margin-left: 3%;
+    margin-top: 1.5%;
+}
+.sign-in-form-group{
+    margin-top: 5%;
+}
+.signin-label{
+    font-family: 'Comfortaa', cursive;
+    color: #add8ff;
+    /* padding-top: 2%; */
+}
+#signinbtn{
+    cursor: pointer;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    background-color:rgb(51, 51, 51);   
+    margin-top: 3%; 
+    text-align: start;
+    border: none;  
+
+}
+#signinbtn:hover{
+    background-color:rgb(109, 109, 109); 
+    border: none;  
+}
+.signin-input{
+    font-family: 'Comfortaa', cursive;
+}
+.gitText{
+    font-size: 1em;
+    font-family: 'Comfortaa', cursive;
+    color: #282c34;
+    font-family: 'Open Sans', sans-serif;
+}
+@media only screen and (max-width: 600px) {
+    .signin-form{
+        width: 80%;
+        padding: 1.5%;
+        top: 10%;
+        left:10%;
+    }
+  }
+
