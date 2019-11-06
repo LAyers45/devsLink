@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import "../../Pages/EditUser/EditUser.css";
-import API from "../../utils/API";
+// import API from "../../utils/API";
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
-// import { Input, TextArea, FormBtn } from "../../components/Form";
-import { Container, Row, Col, Form, Button, FormGroup, Label, Input } from 'reactstrap';
+import { Container, Row, Col, Form, Button, FormGroup, Input } from 'reactstrap';
 import profilePic from '../../images/default-profile-pic.png'
 
 
@@ -32,7 +31,7 @@ class EditUser extends Component {
                                     <Row>
                                         <Col className="user-card-respoonsive-col-pic">
                                             <img src={profilePic} className="profile-pic" alt="profile-pic" />
-                                            <div className="username">
+                                            <div className="username-edit-user-page">
                                                 Username
                                     </div>
                                         </Col>
@@ -61,6 +60,7 @@ class EditUser extends Component {
                         </Col>
                     </Row>
                 </Container>
+                <Footer />
             </React.Fragment>
         )
 

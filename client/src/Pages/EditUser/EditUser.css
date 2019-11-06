@@ -13,11 +13,11 @@
         left:28%;
         border: none;
     }
-    .username{
+    .username-edit-user-page{
         width: 85%;
         font-family: 'Comfortaa', cursive;
-        font-size: 2em;
-        margin-left: 2%;
+        font-size: 1.5em;
+        margin-left: 1%;
         font-weight: bold;
         color: #add8ff;
     }
@@ -70,9 +70,13 @@
             top: 20%;
             left:2.5%;
         }
-        .username{
+        .username-edit-user-page{
+            width: 85%;
+            font-family: 'Comfortaa', cursive;
             font-size: 1.5em;
-            margin-left: 4%;
+            margin-left: 1%;
+            font-weight: bold;
+            color: #add8ff;
         }
         .github{
             font-size: 1em;

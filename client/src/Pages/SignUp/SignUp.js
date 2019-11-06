@@ -1,18 +1,11 @@
 import React, { Component } from "react";
 import "./SignUp.css";
 import API from "../../utils/API";
-//import { Container, Row } from "../../components/Container/Container";
-//import { Input, TextArea, FormBtn } from "../../components/Form";
-import { Container, Row, Col, Form, Button, FormGroup, Label, Input } from 'reactstrap';
+import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import { GithubLoginButton } from "react-social-login-buttons";
 import Footer from '../../components/Footer/Footer';
 
-
-
-
 // npm install bootstrap reactstrap react-social-login-buttons
-
-
 
 class SignUp extends Component {
     state = {
@@ -28,12 +21,9 @@ class SignUp extends Component {
 
     loadUser = () => {
         API.saveUser()
-        let loggedin = false
             .then(res =>
                 this.setState({ User: res.data, username: "", email: "", password: "" }),
                 document.location.href = "/main",
-                loggedin = true,
-                console.log(loggedin)
             )
             .catch(err => console.log(err));
 
@@ -71,7 +61,7 @@ class SignUp extends Component {
                             <Form className="signup-form">
                                 <Row>
                                     <Col>
-                                        <a href="/"><button type="button" class="backButton "> &lt;</button></a>
+                                        <a href="/"><button type="button" className="backButton "> &lt;</button></a>
                                         <h1 className="text-center">Sign Up To DevsLink</h1>
                                     </Col>
                                 </Row>
