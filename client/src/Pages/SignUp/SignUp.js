@@ -28,12 +28,11 @@ class SignUp extends Component {
 
     loadUser = () => {
         API.saveUser()
-        let loggedin = false
             .then(res =>
                 this.setState({ User: res.data, username: "", email: "", password: "" }),
-                document.location.href = "/main",
-                loggedin = true,
-                console.log(loggedin)
+                // console.log(this.state),
+                document.location.href = "/main"
+
             )
             .catch(err => console.log(err));
 
@@ -71,7 +70,7 @@ class SignUp extends Component {
                             <Form className="signup-form">
                                 <Row>
                                     <Col>
-                                        <a href="/"><button type="button" class="backButton "> &lt;</button></a>
+                                        <a href="/"><button type="button" className="backButton "> &lt;</button></a>
                                         <h1 className="text-center">Sign Up To DevsLink</h1>
                                     </Col>
                                 </Row>
