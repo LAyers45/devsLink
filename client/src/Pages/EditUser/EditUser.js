@@ -10,14 +10,15 @@ import profilePic from '../../images/default-profile-pic.png'
 
 class EditUser extends Component {
     state = {
-        user: [],
-        username: "",
-        email: "",
-        password: "",
-        image: "",
-        specialization: ""
+        user: []
 
     };
+
+    componentDidMount() {
+        API.getBook(this.props.match.params.id)
+            .then(res => this.setState({ user: res.data }))
+            .catch(err => console.log(err));
+    }
 
     render() {
         return (
