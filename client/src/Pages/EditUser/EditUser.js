@@ -16,9 +16,21 @@ class EditUser extends Component {
     };
 
     componentDidMount() {
-        API.getBook(this.props.match.params.id)
+        API.getUser(this.props.match.params.id)
             .then(res => this.setState({ user: res.data }))
             .catch(err => console.log(err));
+    }
+
+    handleChange = (e) => {
+        //console.log(e)
+        this.setState({
+            [e.target.id]: e.target.value
+        })
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(this.state)
     }
 
     render() {
@@ -28,28 +40,44 @@ class EditUser extends Component {
                 <Container>
                     <Row>
                         <Col>
-                            <Form className="card">
+                            <Form onSubmit={this.handleSubmit} className="card">
                                 <FormGroup>
                                     <Row>
                                         <Col className="user-card-respoonsive-col-pic">
                                             <img src={profilePic} className="profile-pic" alt="profile-pic" />
-                                            <div className="username">
-                                                Username
-                                    </div>
+
+                                            <div className="input-field">
+                                                <label htmlFor="username">Username</label>
+                                                <input type="text" id="username" onchange={this.handleChange} />
+                                            </div>
+
                                         </Col>
                                         <Col className="user-card-respoonsive-col-info">
-                                            <span className="user-card-span">Email:</span>
-                                            <Input className="email" placeholder="email@gmail.com">
-                                            </Input>
-                                            <span className="user-card-span">Github:</span>
-                                            <Input className="github" placeholder="Your Github">
-                                            </Input>
-                                            <span className="user-card-span">Website:</span>
-                                            <Input className="website" placeholder="Yourwebsite.com">
-                                            </Input>
-                                            <span className="user-card-span">Programming Languages:</span>
-                                            <Input className="languages" placeholder="Proficient Languages">
-                                            </Input>
+
+                                            <div className="input-field">
+                                                <label htmlFor="email">Email</label>
+                                                <input type="email" id="email" placeholder="Your Email"
+                                                    onchange={this.handleChange} />
+                                            </div>
+
+                                            <div className="input-field">
+                                                <label htmlFor="github">Github</label>
+                                                <input type="text" id="github" placeholder="Your Github"
+                                                    onchange={this.handleChange} />
+                                            </div>
+
+                                            <div className="input-field">
+                                                <label htmlFor="website">Website</label>
+                                                <input type="text" id="website" placeholder="Your Website.com"
+                                                    onchange={this.handleChange} />
+                                            </div>
+
+                                            <div className="input-field">
+                                                <label htmlFor="specialization">Programming Languages:</label>
+                                                <input type="text" id="specialization" placeholder="Proficient Languages"
+                                                    onchange={this.handleChange} />
+                                            </div>
+
                                         </Col>
                                     </Row>
                                     <Row>
