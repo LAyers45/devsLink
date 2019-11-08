@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Wrapper from './components/Wrapper/index'
@@ -19,26 +19,28 @@ import EditProject from './Pages/EditProject/EditProject';
 
 
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Route exact path="/" component={Onload} />
-        <Wrapper>
-          <Route exact path="/signin" component={Signin} />
-          <Route exact path="/signup" component={Signup} />
-          <Route exact path="/main" component={Main} />
-          <Route exact path="/user" component={UserPage} />
-          <Route exact path="/devsearch" component={DevSearch} />
-          <Route exact path="/devworks" component={DevWorks} />
-          <Route exact path="/edit" component={EditUser} />
-          <Route exact path="/project" component={Project} />
-          <Route exact path="/createproject" component={CreateProject} />
-          <Route exact path="/editproject" component={EditProject} />
-        </Wrapper>
-      </div>
-    </Router>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <Route exact path="/" component={Onload} />
+          <Wrapper>
+            <Route exact path="/signin" component={Signin} />
+            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/main" component={Main} />
+            <Route exact path="/user" component={UserPage} />
+            <Route exact path="/devsearch" component={DevSearch} />
+            <Route exact path="/devworks" component={DevWorks} />
+            <Route exact path="/edit" component={EditUser} />
+            <Route exact path="/project" component={Project} />
+            <Route exact path="/createproject" component={CreateProject} />
+            <Route exact path="/editproject" component={EditProject} />
+          </Wrapper>
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
