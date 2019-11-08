@@ -12,17 +12,17 @@ function DevSearch() {
     return (
         <div>
             <Navbar />
-            <div class='row'>
-                <div class='column'>
+            <div className='dev-search-row'>
+                <div className='column'>
                     <DevCard className="dev-search-card" />
                 </div>
-                <div class='column'>
+                <div className='dev-search-column'>
                     <DevCard className="dev-search-card" />
                 </div>
-                <div class='column'>
+                <div className='column'>
                     <DevCard className="dev-search-card" />
                 </div>
-                <div class='column'>
+                <div className='column'>
                     <DevCard className="dev-search-card" />
                 </div>
             </div>

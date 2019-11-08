@@ -2,14 +2,14 @@
     display: flex;
     flex-wrap: wrap;
   } */
-  .row {
+  .dev-search-row{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
   }
   
-  .column {
+  .dev-search-column {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
