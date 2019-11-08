@@ -7,7 +7,7 @@ import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import { GithubLoginButton } from "react-social-login-buttons";
 import Footer from '../../components/Footer/Footer';
 
-// import { useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { signIn } from '../../actions/index';
 
 
@@ -33,8 +33,11 @@ class SignUp extends Component {
         API.saveUser()
             .then(res =>
                 this.setState({ User: res.data, username: "", email: "", password: "" }),
-                document.location.href = "/main"
-                // signIn()
+                console.log("Step One"),
+                signIn(),
+                console.log("Step Two"),
+                document.location.href = "/main",
+                console.log("Step Three")
 
 
             )
@@ -42,11 +45,11 @@ class SignUp extends Component {
 
     };
 
-    // signIn = () => {
-    //     let dispatch = useDispatch();
-    //     dispatch(signIn())
+    signIn = () => {
+        let dispatch = useDispatch();
+        dispatch(signIn())
 
-    // }
+    }
 
     handleInputChange = event => {
         const { name, value } = event.target;
@@ -115,7 +118,7 @@ class SignUp extends Component {
 
                                             <button className="btn-lg btn-dark btn-block" id="signupbtn"
                                                 disabled={!(this.state.username && this.state.email && this.state.password)}
-                                            // onClick={this.handleFormSubmit}
+                                                onClick={this.handleFormSubmit}
                                             // onClick={() => dispatch(signIn())}
                                             >
                                                 Create User Profile
