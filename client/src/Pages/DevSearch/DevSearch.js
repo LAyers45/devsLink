@@ -8,9 +8,6 @@ import API from "../../utils/API";
 import DevSearchBar from "../../components/DevSearchBar/DevSearchBar";
 
 
-
-
-
 class DevSearch extends Component {
 
     // state = {
