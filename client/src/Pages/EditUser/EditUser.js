@@ -4,7 +4,7 @@ import API from "../../utils/API";
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 // import { Input, TextArea, FormBtn } from "../../components/Form";
-import { Container, Row, Col, Form, Button, FormGroup, Label, Input } from 'reactstrap';
+import { Container, Row, Col, Form, Button, FormGroup, Input } from 'reactstrap';
 import profilePic from '../../images/default-profile-pic.png'
 
 
@@ -62,6 +62,7 @@ class EditUser extends Component {
                         </Col>
                     </Row>
                 </Container>
+                <Footer />
             </React.Fragment>
         )
 

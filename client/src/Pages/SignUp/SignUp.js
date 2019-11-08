@@ -3,15 +3,17 @@ import "./SignUp.css";
 import API from "../../utils/API";
 //import { Container, Row } from "../../components/Container/Container";
 //import { Input, TextArea, FormBtn } from "../../components/Form";
-import { Container, Row, Col, Form, Button, FormGroup, Label, Input } from 'reactstrap';
+import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import { GithubLoginButton } from "react-social-login-buttons";
 import Footer from '../../components/Footer/Footer';
+
+// import { useDispatch } from 'react-redux'
+import { signIn } from '../../actions/index';
 
 
 
 
 // npm install bootstrap reactstrap react-social-login-buttons
-
 
 
 class SignUp extends Component {
@@ -26,18 +28,25 @@ class SignUp extends Component {
     //     this.loadUser();
     // }
 
+
     loadUser = () => {
         API.saveUser()
             .then(res =>
                 this.setState({ User: res.data, username: "", email: "", password: "" }),
-                // console.log(this.state),
                 document.location.href = "/main"
+                // signIn()
+
 
             )
             .catch(err => console.log(err));
 
     };
 
+    // signIn = () => {
+    //     let dispatch = useDispatch();
+    //     dispatch(signIn())
+
+    // }
 
     handleInputChange = event => {
         const { name, value } = event.target;
@@ -61,6 +70,7 @@ class SignUp extends Component {
     };
 
     render() {
+        // const dispatch = useDispatch();
         return (
 
             <React.Fragment>
@@ -105,7 +115,8 @@ class SignUp extends Component {
 
                                             <button className="btn-lg btn-dark btn-block" id="signupbtn"
                                                 disabled={!(this.state.username && this.state.email && this.state.password)}
-                                                onClick={this.handleFormSubmit}
+                                            // onClick={this.handleFormSubmit}
+                                            // onClick={() => dispatch(signIn())}
                                             >
                                                 Create User Profile
 

@@ -6,6 +6,7 @@ import DevSearch from '../../images/dev-search.png';
 import DevWorks from '../../images/dev-works.png';
 import UserProfile from '../../images/user-profile.png';
 import Project from '../../images/project.png';
+import LogCheck from '../../components/Logincheck/Logincheck'
 
 import { Container, Row, Col } from 'reactstrap';
 
@@ -14,6 +15,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 function MainPage() {
     return (
+
 
         < div >
 
