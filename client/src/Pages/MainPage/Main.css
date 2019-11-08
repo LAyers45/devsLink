@@ -1,27 +1,58 @@
 .cards{
-    padding: .5%;
-    margin: auto;
     animation: card 1250ms ease forwards;
     transition: 0.5s ease;
-    margin-top: 7%;
+    width: 15rem;
 }
 @keyframes card{
     from{ transform: translateX(-300%)}
     to{transform: translateX(3%)}
 }
-@media only screen and (max-width: 1025px) {
+.main-page-container{
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+   
+}
+.main-page-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.main-page-col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    padding: 0 1%;
+    
+}
+
+@media only screen and (max-width: 1024px) {
     .cards{
-        width: 30%;
-        padding: .5%;
-        margin-top: 13%;
-        margin-left: 13%;
-    }
-  }
+     padding: 10px 0;
+     width: 19rem;
+     align-self:center;
+}
+   .main-page-container{
+       position: relative;
+}
+    .main-page-col {
+    align-items: center;
+    margin-top: 4rem;
+}
+
+}
 @media only screen and (max-width: 600px) {
     .cards{
-        width: 40%;
-        padding: .5%;
-        margin-top: 21%;
-        margin-left: 6%;
-    }
-  }
+     padding: 10px 0;
+}
+   .main-page-container{
+       position: relative;
+}
+
+}
+

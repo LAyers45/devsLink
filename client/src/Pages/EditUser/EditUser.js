@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../../Pages/EditUser/EditUser.css";
-// import API from "../../utils/API";
+import API from "../../utils/API";
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import { Container, Row, Col, Form, Button, FormGroup, Input } from 'reactstrap';
