@@ -8,9 +8,6 @@ import DevSearchCards from '../../components/DevSearchCards/DevSearchCards';
 import DevSearchBar from "../../components/DevSearchBar/DevSearchBar";
 
 
-
-
-
 class DevSearch extends Component {
 
     // state = {
@@ -125,6 +122,7 @@ class DevSearch extends Component {
                         </div>
 
                     </div>
+
 
 
                     <Footer />

@@ -1,33 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .navbar{
-    position: fixed;
-    z-index: 1;
-    width: 100vw;
-    height: 10vh;
-}
-ul{
-    width: 100vw;
-    text-decoration: none;
-    list-style: none;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 8vh;
 }
-li{
-    width: 100vw;
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
 }
-#searchLink{
-    margin-top: 1.5%
+.nav-links a{
+    color: #add8ff;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0 1px;
 }
-#worksLink{
-    margin-top: 1.5%
-}#profileLink{
-    margin-top: 1.5%
-}#projectLink{
-    margin-top: 1.5%
+.nav-links li{
+    margin-top: 10%;
+    list-style: none;
 }
 .App-logo{
-    width:100px;
-    height:40px;
+    width:120px;
+    height:50px;
     text-decoration: none;
-    list-style: none;
     transition: 0.5s ease
 }
 .App-logo:hover{
@@ -35,6 +36,7 @@ li{
 }
 .anchor-nav{
     cursor: pointer;
+    text-decoration: none;
     color: #add8ff;
     font-family: 'Comfortaa', cursive;
 }
@@ -42,5 +44,76 @@ li{
     text-decoration: none;
     color: white
 }
+.burger div{
+    width:25px;
+    height: 5px;
+    margin: 2px;
+    background-color: #add8ff;
+    transition: all 0.3s ease;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
 
+/* @media screen and (max-width:1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right:0px;
+        height: 92vh;
+        top:8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translate(100%);
+        transition: transform 0.5s ease-in;
+        background-image: linear-gradient(to bottom, #282c34, #add8ff);
+    }
+    .nav-links li{
+        opacity: 3;
+    }
+    .burger{
+        display: block;
+    }
+    .navbar ul{
+        z-index: 2;
+    }
+    .nav-links a{
+        color: #add8ff;
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+}
 
+@keyframes navLinkFade{
+    from{
+opacity: 0;
+transform: translateX(50px)
+    }
+    to{
+opacity: 1;
+transform: translateX(0px)
+
+    }
+}
+
+.toogle .line1{
+transform: rotate(-45deg )translate(-5px,6px);
+}
+.toogle .line2{
+    opacity: 0;
+}
+.toogle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+
+} */

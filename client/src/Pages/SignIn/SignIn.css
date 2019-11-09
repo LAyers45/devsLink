@@ -1,13 +1,20 @@
 
+.container-signin{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 3% 0;
+}
 .signin-form{
     cursor: default;
-    position: fixed;
+    display: flex;flex-direction: column;
+    justify-content: space-evenly;
     background-image: linear-gradient(#282c34, #add8ff);
     width: 45%;
     padding: 2%;
     border-radius: 15px;
-    top: 3%;
-    left:28%;
 }
 .backButton{
     box-shadow:0 0 6px #add8ff;
@@ -17,8 +24,9 @@
     color:white;
     border: none;
     border-radius: 80px;
-    padding: 2%;
+    width: 30px;
     float: left;
+  
 }
 .text-center{
     font-family: 'Comfortaa', cursive;
@@ -34,7 +42,6 @@
 .signin-label{
     font-family: 'Comfortaa', cursive;
     color: #add8ff;
-    /* padding-top: 2%; */
 }
 #signinbtn{
     cursor: pointer;
@@ -62,9 +69,6 @@
 @media only screen and (max-width: 600px) {
     .signin-form{
         width: 80%;
-        padding: 1.5%;
-        top: 10%;
-        left:10%;
     }
   }
 

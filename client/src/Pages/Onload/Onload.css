@@ -1,219 +1,168 @@
+.onload-container{
+    position: fixed;
+}
+.onload-row {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+.onload-col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100vw;
+    flex: 1;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.onload-inner-col{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25%;
+    width: 100vw;
+}
 .logo{
-    margin-top: 4%;
-    margin-left: 5%;
-    padding: 0%;
-    top: 0;
-    position: fixed;
-    width: 20%;
-}
-.signIn{
-    box-shadow:0 0 6px #add8ff;
-    cursor: pointer;
-    position: fixed;
-    font-family: 'Comfortaa', cursive;
-    background-image: linear-gradient(#add8ff, #6c839b);
-    margin-left: 5%;
-    margin-top: 43%;    
-    color:white;
-    border: none;
-    border-radius: 80px;
-    width: 150px;
-    padding: 10px;
-
-}
-.signUp{
-    box-shadow:0 0 6px #add8ff;
-    cursor: pointer;
-    position: fixed;
-    font-family: 'Comfortaa', cursive;
-    background-image: linear-gradient(#add8ff, #6c839b);
-    margin-left: 20%;
-    margin-top: 43%;    
-    color:white;
-    border: none;
-    border-radius: 80px;
-    width: 150px;
-    padding: 10px;
+    width: 45%;
 }
 .textOne{
     font-family: 'Comfortaa', cursive;
     cursor: default;
-    width: 36%;
-    font-size: 1.75rem;
-    margin-left: 5%;
-    position: fixed;
-    margin-top: 18%;
+    font-size: 1.25rem;
     color: #add8ff;
-    line-height: 120%;
     font-weight: bolder;
     letter-spacing: 1px;
+    margin-top: 8%;
+    text-align: center;
 }
 .textTwo{
     font-family: 'Comfortaa', cursive;
     cursor: default;
-    width: 36%;
-    font-size: 1.75rem;
-    margin-left: 5%;
-    position: fixed;
-    margin-top: 31%;
+    font-size: 1.25rem;
     color: #add8ff;
-    line-height: 120%;
     font-weight: bolder;
     letter-spacing: 1px;
 }
+.signIn{
+    box-shadow:0 0 6px #add8ff;
+    cursor: pointer;
+    font-family: 'Comfortaa', cursive;
+    background-image: linear-gradient(#add8ff, #6c839b);
+    color:white;
+    border: none;
+    border-radius: 80px;
+    width: 150px;
+    padding: 10px;
+}
+.signUp{
+    box-shadow:0 0 6px #add8ff;
+    cursor: pointer;
+    font-family: 'Comfortaa', cursive;
+    background-image: linear-gradient(#add8ff, #6c839b);
+    color:white;
+    border: none;
+    border-radius: 80px;
+    width: 150px;
+    padding: 10px;
+}
 .backgroundImage{
-    position: fixed;
-    width: 55%;
-    float: right;
-    top: 20%;
-    right:5%;
+ width: 100%;
+ margin: 10% 0;
 }
-.devs{
-    animation-duration: 1s;
-    animation-delay: 1s;
-    animation-iteration-count: initial;
-    width: 14%;
-    z-index: 1;
-    float: right;
-    position: fixed;
-    top: 60%;
-    right:12%;
-}
-.mail{
-    animation-duration: 1s;
-    animation-delay: 2.25s;
-    animation-iteration-count: initial;
-    width: 14%;
-    z-index: 1;
-    float: right;
-    position: fixed;
-    top: 11%;
-    right:28%;
-}
-@media only screen and (max-width: 1025px) {
-    .logo{
-        width: 30%;
+
+@media only screen and (max-width: 2254px) {
+    .backgroundImage{
+        width: 100%;
+       }
+       .logo{
+        width: 35%;
     }
     .textOne{
-        width: 36%;
-        font-size: 2.5rem;
-        margin-left: 5%;
-        margin-top: 75%;
-        line-height: 120%;
-        letter-spacing: 1px;
+        font-size: 1.50rem;
+        margin-top: 5%;
     }
     .textTwo{
-        width: 36%;
-        font-size: 2.5rem;
-        margin-left: 5%;
-        margin-top: 110%;
-        line-height: 120%;
-        font-weight: bolder;
-        letter-spacing: 1px;
+        font-size: 1.50rem;
+        margin-top: 2%;
     }
-    .backgroundImage{
-        width: 90%;
-        top: 10%;
-        right:5%;
+    .onload-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100vw;
+        margin: 0 1%;
+        padding: 0 3%;
     }
-    .signIn{
-        margin-left: 50%;
-        margin-top: 100%;    
-        width: 145px;
+    .onload-col {
+       margin-top: 2%;
     }
-    .signUp{
-        margin-left: 70%;
-        margin-top: 100%;    
-        width: 145px;
-    }
-    .mail{
-        top: 7%;
-        right:40%;
-    }
-    .devs{
-        top: 40%;
-        right:22%;
+    .onload-inner-col{
+        margin-top: 10%;
+        width: 45vw;
+        justify-content: space-around;
     }
   }
-@media only screen and (max-width: 600px) {
-    .logo{
+
+
+@media only screen and (max-width: 1024px) {
+    .backgroundImage{
+        width: 60%;
+        margin: 5% 0;
+       }
+       .logo{
         width: 30%;
     }
     .textOne{
-        width: 36%;
-        font-size: 1rem;
-        margin-left: 5%;
-        margin-top: 80%;
-        line-height: 120%;
-        letter-spacing: 1px;
+        font-size: 2rem;
+        margin-top: 5%;
     }
     .textTwo{
-        width: 36%;
-        font-size: 1rem;
-        margin-left: 5%;
-        margin-top: 125%;
-        line-height: 120%;
-        font-weight: bolder;
-        letter-spacing: 1px;
+        font-size: 2rem;
+        margin-top: 8%;
     }
-    .backgroundImage{
-        width: 90%;
-        top: 10%;
-        right:5%;
+    .onload-row {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        width: 100vw;
+        margin: 0 1%;
+        padding: 0 3%;
     }
-    .signIn{
-        margin-left: 5%;
-        margin-top: 150%;    
-        width: 145px;
+    .onload-col {
+       margin-top: 2%;
     }
-    .signUp{
-        margin-left: 50%;
-        margin-top: 150%;    
-        width: 145px;
-    }
-    .mail{
-        top: 7%;
-        right:40%;
-    }
-    .devs{
-        top: 40%;
-        right:22%;
+    .onload-inner-col{
+        margin-top: 10%;
+        width: 45vw;
+        justify-content: space-around;
     }
   }
-  @media only screen and (max-width: 376px) {
-    .logo{
-        width: 30%;
+
+  @media only screen and (max-width: 600px) {
+    .backgroundImage{
+        width: 105%;
+        margin: 5% 0;
+       }
+       .logo{
+        width: 50%;
     }
     .textOne{
-        width: 80%;
-        font-size: 1.5rem;
-        margin-left: 5%;
-        margin-top: 100%;
-      
+        font-size: 1rem;
+        margin-top: 10%;
     }
     .textTwo{
-        width: 80%;
-        font-size: 1.5rem;
-        margin-left: 5%;
-        margin-top: 145%;
+        font-size: 1rem;
+        margin-top: 8%;
     }
-    .backgroundImage{
-        width: 90%;
-        top: 10%;
-        right:5%;
+    .onload-row {
+        flex-direction: column-reverse;
     }
-    .signIn{
-        margin-left: 5%;
-        margin-top: 165%;    
-        width: 145px;
+    .onload-col {
+       margin-top: 5%;
     }
-    .signUp{
-        margin-left: 50%;
-        margin-top: 165%;    
-        width: 145px;
-    }
-    .devs{
-        top: 35%;
-        right:22%;
+    .onload-inner-col{
+        margin-top: 20%;
+        width: 45vw;
+        justify-content: space-around;
     }
   }
