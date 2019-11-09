@@ -88,7 +88,16 @@ class DevSearch extends Component {
                         />
                     </div>
 
-                </div>
+function DevSearch() {
+    return (
+        <div>
+            <Navbar />
+            <div className='dev-search-row'>
+
+                <DevCard className="dev-search-card" />
+
+            </div>
+
 
 
                 <Footer />

@@ -61,55 +61,42 @@ class SignIn extends Component {
         return (
 
             <React.Fragment>
-                <Container>
-                    <Row>
-                        <Col>
-                            <Form className="signup-form">
+                <div className="container-signin">
+                    <Form className="signin-form">
+                        <div className="row-signin-header">
+                            <a href="/"><button type="button" className="backButton "> &lt;</button></a>
+                            <h1 className="text-center">Sign In</h1>
+                        </div>
+                        <FormGroup className="sign-in-form-group">
+                            <Label>User Name</Label>
+                            <Input
+                                name="username"
+                                value={this.state.username}
+                                onChange={this.handleInputChange}
+                                type="User Name"
+                                placeholder="User Name (required)"
+                            />
+                            <Label>Password</Label>
+                            <Input
+                                name="password"
+                                value={this.state.password}
+                                onChange={this.handleInputChange}
+                                type="password"
+                                placeholder="Password (required)"
+                            />
 
-                                <Row>
-                                    <Col>
-                                        <a href="/"><button type="button" className="backButton "> &lt;</button></a>
-                                        <h1 className="text-center">Sign In To DevsLink</h1>
-                                    </Col>
-                                </Row>
+                            <button className="btn-lg btn-dark btn-block" id="signupbtn"
+                                disabled={!(this.state.username && this.state.password)}
+                                onClick={this.handleFormSubmit}
+                            >
+                                Login
+                                            </button>
+                        </FormGroup>
 
-                                <Row>
-                                    <Col>
-                                        <FormGroup className="sign-up-form-group">
 
-                                            <Label>User Name</Label>
-                                            <Input
-                                                name="username"
-                                                value={this.state.username}
-                                                onChange={this.handleInputChange}
-                                                type="User Name"
-                                                placeholder="User Name (required)"
-                                            />
-                                            <Label>Password</Label>
-                                            <Input
-                                                name="password"
-                                                value={this.state.password}
-                                                onChange={this.handleInputChange}
-                                                type="password"
-                                                placeholder="Password (required)"
-                                            />
+                    </Form>
+                </div>
 
-                                            <button className="btn-lg btn-dark btn-block" id="signupbtn"
-                                                disabled={!(this.state.username && this.state.password)}
-                                                onClick={this.handleFormSubmit}
-                                            >
-                                                Sign-in
-
-                                </button>
-
-                                        </FormGroup>
-                                    </Col>
-                                </Row>
-
-                            </Form>
-                        </Col>
-                    </Row>
-                </Container>
                 <Footer />
             </React.Fragment>
         );

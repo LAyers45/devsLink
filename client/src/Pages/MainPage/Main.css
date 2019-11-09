@@ -8,51 +8,23 @@
     to{transform: translateX(3%)}
 }
 .main-page-container{
-    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
     justify-content: center;
-    width: 100%;
    
 }
 .main-page-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-content: center;
     align-items: center;
     justify-content: space-evenly;
-}
-.main-page-col {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-    padding: 0 1%;
-    
+    margin: 3% 0;
 }
 
-@media only screen and (max-width: 1024px) {
-    .cards{
-     padding: 10px 0;
-     width: 19rem;
-     align-self:center;
-}
-   .main-page-container{
-       position: relative;
-}
-    .main-page-col {
-    align-items: center;
-    margin-top: 4rem;
-}
 
-}
-@media only screen and (max-width: 600px) {
-    .cards{
-     padding: 10px 0;
-}
-   .main-page-container{
-       position: relative;
-}
-
-}
 
