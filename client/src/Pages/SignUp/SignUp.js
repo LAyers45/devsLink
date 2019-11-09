@@ -1,9 +1,21 @@
 import React, { Component } from "react";
 import "./SignUp.css";
 import API from "../../utils/API";
+//import { Container, Row } from "../../components/Container/Container";
+//import { Input, TextArea, FormBtn } from "../../components/Form";
+
 import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import { GithubLoginButton } from "react-social-login-buttons";
 import Footer from '../../components/Footer/Footer';
+
+import { bindActionCreators } from 'redux';
+// import { useDispatch } from 'react-redux'
+import store from "../../store";
+import { connect } from 'react-redux';
+import { signIn } from '../../actions';
+
+
+
 
 // npm install bootstrap reactstrap react-social-login-buttons
 
@@ -19,16 +31,25 @@ class SignUp extends Component {
     //     this.loadUser();
     // }
 
+
     loadUser = () => {
         API.saveUser()
             .then(res =>
                 this.setState({ User: res.data, username: "", email: "", password: "" }),
-                document.location.href = "/main",
+                document.location.href = "/main"
+                // signIn()
+
             )
             .catch(err => console.log(err));
 
     };
 
+    signIn = (event) => {
+        event.preventDefault();
+        // let dispatch = useDispatch();
+        store.dispatch(signIn());
+
+    }
 
     handleInputChange = event => {
         const { name, value } = event.target;
@@ -52,6 +73,7 @@ class SignUp extends Component {
     };
 
     render() {
+        // const dispatch = useDispatch();
         return (
 
             <React.Fragment>
@@ -96,7 +118,8 @@ class SignUp extends Component {
 
                                             <button className="btn-lg btn-dark btn-block" id="signupbtn"
                                                 disabled={!(this.state.username && this.state.email && this.state.password)}
-                                                onClick={this.handleFormSubmit}
+                                                // onClick={this.handleFormSubmit}
+                                                onClick={this.signIn, this.handleFormSubmit}
                                             >
                                                 Create User Profile
 
@@ -120,4 +143,9 @@ class SignUp extends Component {
     }
 }
 
-export default SignUp;
+const mapStateToProps = null;
+const mapDispatchToProps = dispatch => ({
+    actions: bindActionCreators(signIn, dispatch),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

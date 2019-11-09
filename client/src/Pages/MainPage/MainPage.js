@@ -6,6 +6,7 @@ import DevSearch from '../../images/dev-search.png';
 import DevWorks from '../../images/dev-works.png';
 import UserProfile from '../../images/user-profile.png';
 import Project from '../../images/project.png';
+import LogCheck from '../../components/Logincheck/Logincheck'
 
 
 
@@ -13,6 +14,7 @@ import Project from '../../images/project.png';
 
 function MainPage() {
     return (
+
 
         < div >
 
