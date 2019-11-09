@@ -3,6 +3,7 @@ import "./SignUp.css";
 import API from "../../utils/API";
 //import { Container, Row } from "../../components/Container/Container";
 //import { Input, TextArea, FormBtn } from "../../components/Form";
+
 import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 import { GithubLoginButton } from "react-social-login-buttons";
 import Footer from '../../components/Footer/Footer';
@@ -17,7 +18,6 @@ import { signIn } from '../../actions';
 
 
 // npm install bootstrap reactstrap react-social-login-buttons
-
 
 class SignUp extends Component {
     state = {
@@ -38,7 +38,6 @@ class SignUp extends Component {
                 this.setState({ User: res.data, username: "", email: "", password: "" }),
                 document.location.href = "/main"
                 // signIn()
-
 
             )
             .catch(err => console.log(err));

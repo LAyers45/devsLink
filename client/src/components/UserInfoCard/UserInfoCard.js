@@ -14,7 +14,7 @@ export default function UserInfoCard() {
                             <Row>
                                 <Col className="user-card-respoonsive-col-pic">
                                     <img src={profilePic} className="profile-pic" alt="profile-pic" />
-                                    <div className="username">
+                                    <div className="username-info-card">
                                         Username
                                     </div>
                                 </Col>

@@ -7,6 +7,7 @@ import Footer from '../../components/Footer/Footer'
 
 
 
+
 class SignIn extends Component {
     state = {
         username: "",
@@ -16,14 +17,12 @@ class SignIn extends Component {
 
     };
 
-
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
             [name]: value
         });
     };
-
 
 
     handleFormSubmit = event => {
@@ -58,7 +57,6 @@ class SignIn extends Component {
         }
     }
 
-
     render() {
         return (
 
@@ -67,6 +65,7 @@ class SignIn extends Component {
                     <Row>
                         <Col>
                             <Form className="signup-form">
+
                                 <Row>
                                     <Col>
                                         <a href="/"><button type="button" className="backButton "> &lt;</button></a>
@@ -77,6 +76,7 @@ class SignIn extends Component {
                                 <Row>
                                     <Col>
                                         <FormGroup className="sign-up-form-group">
+
                                             <Label>User Name</Label>
                                             <Input
                                                 name="username"
@@ -101,6 +101,7 @@ class SignIn extends Component {
                                                 Sign-in
 
                                 </button>
+
                                         </FormGroup>
                                     </Col>
                                 </Row>
