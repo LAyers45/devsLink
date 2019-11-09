@@ -13,18 +13,9 @@ function DevSearch() {
         <div>
             <Navbar />
             <div className='dev-search-row'>
-                <div className='column'>
-                    <DevCard className="dev-search-card" />
-                </div>
-                <div className='dev-search-column'>
-                    <DevCard className="dev-search-card" />
-                </div>
-                <div className='column'>
-                    <DevCard className="dev-search-card" />
-                </div>
-                <div className='column'>
-                    <DevCard className="dev-search-card" />
-                </div>
+
+                <DevCard className="dev-search-card" />
+
             </div>
 
 

@@ -55,65 +55,54 @@ class SignUp extends Component {
         return (
 
             <React.Fragment>
-                <Container>
-                    <Row>
-                        <Col>
-                            <Form className="signup-form">
-                                <Row>
-                                    <Col>
-                                        <a href="/"><button type="button" className="backButton "> &lt;</button></a>
-                                        <h1 className="text-center">Sign Up To DevsLink</h1>
-                                    </Col>
-                                </Row>
+                <div className="container-signup">
+                    <Form className="signup-form">
+                        <div className="row-signup-header">
+                            <a href="/"><button type="button" className="backButton "> &lt;</button></a>
+                            <h1 className="text-center">Sign Up</h1>
+                        </div>
+                        <FormGroup className="sign-up-form-group">
+                            <Label>User Name</Label>
+                            <Input
+                                name="username"
+                                value={this.state.username}
+                                onChange={this.handleInputChange}
+                                type="User Name"
+                                placeholder="User Name (required)"
+                            />
+                            <Label>Email</Label>
+                            <Input
+                                name="email"
+                                value={this.state.email}
+                                onChange={this.handleInputChange}
+                                type="email"
+                                placeholder="Email (required)"
+                            />
+                            <Label>Password</Label>
+                            <Input
+                                name="password"
+                                value={this.state.password}
+                                onChange={this.handleInputChange}
+                                type="password"
+                                placeholder="Password (required)"
+                            />
 
-                                <Row>
-                                    <Col>
-                                        <FormGroup className="sign-up-form-group">
-                                            <Label>User Name</Label>
-                                            <Input
-                                                name="username"
-                                                value={this.state.username}
-                                                onChange={this.handleInputChange}
-                                                type="User Name"
-                                                placeholder="User Name (required)"
-                                            />
-                                            <Label>Email</Label>
-                                            <Input
-                                                name="email"
-                                                value={this.state.email}
-                                                onChange={this.handleInputChange}
-                                                type="email"
-                                                placeholder="Email (required)"
-                                            />
-                                            <Label>Password</Label>
-                                            <Input
-                                                name="password"
-                                                value={this.state.password}
-                                                onChange={this.handleInputChange}
-                                                type="password"
-                                                placeholder="Password (required)"
-                                            />
-
-                                            <button className="btn-lg btn-dark btn-block" id="signupbtn"
-                                                disabled={!(this.state.username && this.state.email && this.state.password)}
-                                                onClick={this.handleFormSubmit}
-                                            >
-                                                Create User Profile
-
+                            <button className="btn-lg btn-dark btn-block" id="signupbtn"
+                                disabled={!(this.state.username && this.state.email && this.state.password)}
+                                onClick={this.handleFormSubmit}
+                            >
+                                Create User Profile
+    
                                 </button>
-                                            <div className="gitText text-center pt-3">
-                                                Or Use GitHub
-
+                            <div className="gitText text-center pt-3">
+                                Or Use GitHub
+    
                             </div>
-                                            <GithubLoginButton className="mt-3 mb-3"></GithubLoginButton>
-                                        </FormGroup>
-                                    </Col>
-                                </Row>
+                            <GithubLoginButton className="mt-3 mb-3"></GithubLoginButton>
+                        </FormGroup>
 
-                            </Form>
-                        </Col>
-                    </Row>
-                </Container>
+                    </Form>
+                </div>
                 <Footer />
             </React.Fragment>
         );
