@@ -9,24 +9,10 @@ import Footer from '../../components/Footer/Footer'
 
 class SignIn extends Component {
     state = {
-        user: [],
         username: "",
-        password: ""
-    };
-
-    // componentDidMount() {
-    //     this.loadUser();
-    // }
-
-    loadUser = () => {
-        API.saveUser()
-            .then(res =>
-                this.setState({ User: res.data, username: "", email: "", password: "" }),
-                // console.log(this.state),
-                document.location.href = "/main"
-
-            )
-            .catch(err => console.log(err));
+        password: "",
+        onSuccess: "",
+        onFailure: ""
 
     };
 
@@ -38,19 +24,40 @@ class SignIn extends Component {
         });
     };
 
+
+
     handleFormSubmit = event => {
         event.preventDefault();
         if (this.state.username && this.state.password) {
-            API.saveUser({
+            API.signin({
                 username: this.state.username,
-                email: this.state.email,
                 password: this.state.password
             })
-                .then(res => this.loadUser())
+                .then(res => {
+                    console.log(res.data)
+                    if (res.status === 200) {
+                        console.log("Success")
+                        this.setState({
+                            onSuccess: "Signin was successful",
+                            onFailure: ""
+                        });
+                        this.props.bindUser({
+                            username: res.data.username,
+                            id: res.data._id,
+                            loggedIn: true
+                        });
+                    }
+                })
 
-                .catch(err => alert("error"));
+                .catch(err =>
+                    this.setState({
+                        onSuccess: "",
+                        onFailure: "Sign in information is incorrect"
+                    })
+                );
         }
-    };
+    }
+
 
     render() {
         return (
@@ -91,7 +98,7 @@ class SignIn extends Component {
                                                 disabled={!(this.state.username && this.state.password)}
                                                 onClick={this.handleFormSubmit}
                                             >
-                                                Create User Profile
+                                                Sign-in
 
                                 </button>
                                         </FormGroup>

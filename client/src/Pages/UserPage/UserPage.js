@@ -11,12 +11,12 @@ class UserPage extends Component {
 
     };
 
-    componentDidMount() {
-        API.getUser(this.props.match.params.id)
-            .then(res => this.setState({ user: res.data }))
-            .catch(err => console.log(err));
-        console.log(this.state)
-    }
+    // componentDidMount() {
+    //     API.getUser(this.props.match.params.id)
+    //         .then(res => this.setState({ user: res.data }))
+    //         .catch(err => console.log(err));
+    //     console.log(this.state)
+    // }
 
 
 
@@ -25,7 +25,6 @@ class UserPage extends Component {
             <React.Fragment>
                 <Navbar />
                 <UserInfoCard />
-                <h1>{this.state.user.username}</h1>
                 <Footer />
             </React.Fragment>
 

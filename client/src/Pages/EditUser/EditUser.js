@@ -15,11 +15,11 @@ class EditUser extends Component {
 
     };
 
-    componentDidMount() {
-        API.getUser(this.props.match.params.id)
-            .then(res => this.setState({ user: res.data }))
-            .catch(err => console.log(err));
-    }
+    // componentDidMount() {
+    //     API.getUser(this.props.match.params.id)
+    //         .then(res => this.setState({ user: res.data }))
+    //         .catch(err => console.log(err));
+    // }
 
     render() {
         return (

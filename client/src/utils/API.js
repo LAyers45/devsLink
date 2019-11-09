@@ -9,5 +9,8 @@ export default {
   },
   saveUser: function (userData) {
     return axios.post("/api/user", userData);
+  },
+  signin: function (userInfo) {
+    return axios.post("/api/users", userInfo)
   }
 };
