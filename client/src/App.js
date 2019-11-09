@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Wrapper from './components/Wrapper/index'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import axios from "axios";
 // Page Import
 import Onload from './Pages/Onload/OnLoad';
 import Signin from './Pages/SignIn/SignIn';
@@ -16,29 +16,160 @@ import CreateProject from './Pages/CreateProject/CreateProject';
 import EditProject from './Pages/EditProject/EditProject';
 
 
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      username: null,
+      email: null,
+      loggedIn: false
+    };
+    this.componentDidMount = this.componentDidMount.bind(this);
+    this.bindUser = this.bindUser.bind(this);
+    this.updateUserInfo = this.updateUserInfo.bind(this);
+  }
+
+  componentDidMount() {
+    this.bindUser();
+  }
+
+  updateUserInfo(info) {
+    this.setState(info)
+  }
+
+  bindUser() {
+    axios.get("api/users/").then(res => {
+      if (res.data.user) {
+        console.log("Congrats there is a user");
+        console.log(res.data.user.username);
+        this.setState({
+          username: res.data.user.username,
+          email: res.data.user.email,
+          loggedIn: res.data.user.loggedIn
+        });
+      } else {
+        console.log("Curses there is no user");
+        this.setState({
+          username: null,
+          email: null,
+          loggedIn: false
+        });
+      }
+    });
+  }
 
 
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <Switch>
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Route exact path="/" component={Onload} />
-        <Wrapper>
-          <Route exact path="/signin" component={Signin} />
-          <Route exact path="/signup" component={Signup} />
-          <Route exact path="/main" component={Main} />
-          <Route exact path="/user" component={UserPage} />
-          <Route exact path="/devsearch" component={DevSearch} />
-          <Route exact path="/devworks" component={DevWorks} />
-          <Route exact path="/edit" component={EditUser} />
-          <Route exact path="/project" component={Project} />
-          <Route exact path="/createproject" component={CreateProject} />
-          <Route exact path="/editproject" component={EditProject} />
-        </Wrapper>
-      </div>
-    </Router>
-  );
+            <Route exact path="/" render={() => (
+              <Onload
+                username={this.state.username}
+                email={this.state.username}
+                loggedIn={this.state.loggedIn}
+              />
+            )}
+            />
+
+            <Route exact path="/signin" render={() => (
+              <Signin
+                username={this.state.username}
+                email={this.state.username}
+                loggedIn={this.state.loggedIn}
+              />
+            )}
+            />
+
+            <Route exact path="/signup" render={() => (
+              <Signup
+                username={this.state.username}
+                email={this.state.username}
+                loggedIn={this.state.loggedIn}
+              />
+            )}
+            />
+
+            <Route exact path="/main" render={() => (
+              <Main
+                username={this.state.username}
+                email={this.state.username}
+                loggedIn={this.state.loggedIn}
+              />
+            )}
+            />
+
+            <Route exact path="/user" render={() => (
+              <UserPage
+                username={this.state.username}
+                email={this.state.username}
+                loggedIn={this.state.loggedIn}
+              />
+            )}
+            />
+
+            <Route exact path="/devsearch" render={() => (
+              <DevSearch
+                username={this.state.username}
+                email={this.state.username}
+                loggedIn={this.state.loggedIn}
+              />
+            )}
+            />
+
+            <Route exact path="/devworks" render={() => (
+              <DevWorks
+                username={this.state.username}
+                email={this.state.username}
+                loggedIn={this.state.loggedIn}
+              />
+            )}
+            />
+
+            <Route exact path="/edit" render={() => (
+              <EditUser
+                username={this.state.username}
+                email={this.state.username}
+                loggedIn={this.state.loggedIn}
+              />
+            )}
+            />
+
+            <Route exact path="/project" render={() => (
+              <Project
+                username={this.state.username}
+                email={this.state.username}
+                loggedIn={this.state.loggedIn}
+              />
+            )}
+            />
+
+            <Route exact path="/createproject" render={() => (
+              <CreateProject
+                username={this.state.username}
+                email={this.state.username}
+                loggedIn={this.state.loggedIn}
+              />
+            )}
+            />
+
+            <Route exact path="/editproject" render={() => (
+              <EditProject
+                username={this.state.username}
+                email={this.state.username}
+                loggedIn={this.state.loggedIn}
+              />
+            )}
+            />
+
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
 }
+
 
 export default App;

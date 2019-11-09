@@ -16,13 +16,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^4.1.0",
+    "concurrently": "^5.0.0",
     "nodemon": "^1.18.7"
   },
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "bootstrap": "4.3.1",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
-    "mongoose": "^5.7.7"
+    "mongoose": "^5.7.8",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0"
+
   }
 }

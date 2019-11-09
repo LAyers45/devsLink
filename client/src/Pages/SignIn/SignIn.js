@@ -1,37 +1,21 @@
 import React, { Component } from "react";
-import "./SignIn.css";
-import API from "../../utils/API";
+import "./SignIn";
 import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
-import Footer from '../../components/Footer/Footer';
+import API from "../../utils/API";
+import Footer from '../../components/Footer/Footer'
 
 
-
-
-// npm install bootstrap reactstrap react-social-login-buttons
 
 
 
 class SignIn extends Component {
     state = {
-        user: [],
         username: "",
-        password: ""
-    };
-
-    // componentDidMount() {
-    //     this.loadUser();
-    // }
-
-    loadUser = () => {
-        API.saveUser()
-            .then(res =>
-                this.setState({ User: res.data, username: "", password: "" }),
-                document.location.href = "/main",
-            )
-            .catch(err => console.log(err));
+        password: "",
+        onSuccess: "",
+        onFailure: ""
 
     };
-
 
     handleInputChange = event => {
         const { name, value } = event.target;
@@ -40,18 +24,38 @@ class SignIn extends Component {
         });
     };
 
+
     handleFormSubmit = event => {
         event.preventDefault();
         if (this.state.username && this.state.password) {
-            API.saveUser({
+            API.signin({
                 username: this.state.username,
                 password: this.state.password
             })
-                .then(res => this.loadUser())
+                .then(res => {
+                    console.log(res.data)
+                    if (res.status === 200) {
+                        console.log("Success")
+                        this.setState({
+                            onSuccess: "Signin was successful",
+                            onFailure: ""
+                        });
+                        this.props.bindUser({
+                            username: res.data.username,
+                            id: res.data._id,
+                            loggedIn: true
+                        });
+                    }
+                })
 
-                .catch(err => alert("error"));
+                .catch(err =>
+                    this.setState({
+                        onSuccess: "",
+                        onFailure: "Sign in information is incorrect"
+                    })
+                );
         }
-    };
+    }
 
     render() {
         return (
@@ -92,6 +96,7 @@ class SignIn extends Component {
 
                     </Form>
                 </div>
+
                 <Footer />
             </React.Fragment>
         );
