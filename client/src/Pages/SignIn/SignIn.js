@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./SignIn";
-import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
+import "./SignIn.css";
+import { Form, FormGroup, Label, Input } from 'reactstrap';
 import API from "../../utils/API";
 import Footer from '../../components/Footer/Footer'
 
