@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import "../DevSearch/DevSearch.css";
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
-//import DevCard from '../../components/DevCard/DevCard'
+import DevCard from '../../components/DevCard/DevCard'
 import DevSearchCards from '../../components/DevSearchCards/DevSearchCards';
 //import API from "../../utils/API";
 import DevSearchBar from "../../components/DevSearchBar/DevSearchBar";
+
 
 
 class DevSearch extends Component {
