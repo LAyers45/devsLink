@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import DevCard from '../../components/DevCard/DevCard'
 import DevSearchCards from '../../components/DevSearchCards/DevSearchCards';
-import API from "../../utils/API";
+//import API from "../../utils/API";
 import DevSearchBar from "../../components/DevSearchBar/DevSearchBar";
 
 
@@ -34,55 +34,104 @@ class DevSearch extends Component {
     //             .catch(err => alert("error"));
     //     }
     // };
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         users: [],
+    //         searchField: ''
+    //     }
+    // }
+
+    // componentDidMount() {
+    //     API.getUsers()
+    //         .then(res => this.setState({ breeds: res.data.message }))
+    //         .catch(err => console.log(err));
+    // }
+
+    // handleInputChange = event => {
+    //     this.setState({ search: event.target.value });
+    // };
+
+    // searchUser = (event) => {
+    //     event.preventDefault();
+    //     API.getUsers()
+    //         .then(res =>
+    //             this.setState({ users: res.data, username: "", email: "", specilization: "" })
+    //         )
+    //         .catch(err => console.log(err))
+
+    // }
+
+    // handleSearch = (event) => {
+    //     this.setState({ searchField: event.target.value })
+    // }
+
     constructor(props) {
         super(props);
         this.state = {
-            users: [],
-            searchField: ''
+            items: [],
+            sort: '',
+            searchField: '',
+            isLoaded: false,
         }
     }
 
     componentDidMount() {
-        API.getUsers()
-            .then(res => this.setState({ breeds: res.data.message }))
-            .catch(err => console.log(err));
-    }
-
-    handleInputChange = event => {
-        this.setState({ search: event.target.value });
-    };
-
-    searchUser = (event) => {
-        event.preventDefault();
-        API.getUsers()
-            .then(res =>
-                this.setState({ users: res.data, username: "", email: "", specilization: "" })
-            )
-            .catch(err => console.log(err))
-
-    }
-
-    handleSearch = (event) => {
-        this.setState({ searchField: event.target.value })
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(res => res.json())
+            .then(json => {
+                console.log(json)
+                this.setState({
+                    isLoaded: true,
+                    items: json,
+                })
+            })
     }
 
 
     render() {
-        return (
-            <div>
-                <Navbar />
-                <div className='dev-search-row'>
+        //const postDevs = this.state.users.map(user =>
+        // )
 
-                    <DevCard className="dev-search-card" />
+        var { isLoaded, items } = this.state;
 
-                </div>
+        if (!isLoaded) {
+            return <div>Loading...</div>
+        }
+
+        else {
+
+            return (
+                <React.Fragment>
+
+                    <Navbar />
+
+                    <div className='row'>
+                        <DevSearchBar />
+                        <div className='column'>
+                            <DevSearchCards
+                                item={this.state.items}
+                            />
+                            {/* <ul>
+                                {items.map(item => (
+                                    <li key={item.id}>
+                                        Name: {item.name}| Email: {item.email}
+                                    </li>
+                                ))};
+                            </ul> */}
+
+                        </div>
+
+                    </div>
 
 
 
-                <Footer />
-            </div >
+                    <Footer />
 
-        )
+                </React.Fragment>
+            )
+
+        }
     }
 }
 
