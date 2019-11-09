@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import "../DevSearch/DevSearch.css";
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
-//import DevCard from '../../components/DevCard/DevCard'
+import DevCard from '../../components/DevCard/DevCard'
 import DevSearchCards from '../../components/DevSearchCards/DevSearchCards';
 import API from "../../utils/API";
 import DevSearchBar from "../../components/DevSearchBar/DevSearchBar";
+
 
 
 class DevSearch extends Component {
@@ -67,43 +68,21 @@ class DevSearch extends Component {
 
 
     render() {
-        //const postDevs = this.state.users.map(user =>
-        // )
-
         return (
             <div>
                 <Navbar />
+                <div className='dev-search-row'>
 
-                <div className='row'>
-                    <DevSearchBar />
-                    <div className='column'>
-                        <DevSearchCards
-                        //id={user.id}
-                        //key={user.id}
-                        //name={user.name}
-                        //image={user.image}
-                        //email={user.email}
-                        //github={user.github}
-                        //specialization={user.specialization}
-                        />
-                    </div>
+                    <DevCard className="dev-search-card" />
 
-function DevSearch() {
-    return (
-        <div>
-            <Navbar />
-            <div className='dev-search-row'>
-
-                <DevCard className="dev-search-card" />
-
-            </div>
+                </div>
 
 
 
                 <Footer />
             </div >
-        )
 
+        )
     }
 }
 
