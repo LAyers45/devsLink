@@ -8,9 +8,15 @@ import ProfileImage from '../../images/default-profile-pic.png'
 
 class UserPage extends Component {
     state = {
-        user: []
-
+        email: this.props.email,
+        username: this.props.username,
+        id: this.props.id,
+        github: this.props.github,
+        website: this.props.website,
+        specialization: this.props.specialization
     };
+
+
 
     componentDidMount() { }
 
@@ -29,9 +35,10 @@ class UserPage extends Component {
                                     {this.props.username}
                                 </h1>
                                 <ul className="user-dev-link-info">
-                                    <li><a href="#" className='user-dev-email'> {this.props.email}</a></li>                       <li><a href="#" className='dev-github'> https://github.com/DonRiche</a></li>
+                                    <li><a href="#" className='user-dev-email'> {this.props.email}</a></li>
+                                    <li><a href="#" className='dev-github'> {this.props.github}</a></li>
                                     <li><a href="#" className='user-dev-website'> {this.props.website}</a></li>
-                                    <li className='user-dev-language'>{this.props.language}</li>
+                                    <li><a className='user-dev-language'>{this.props.specialization}</a></li>
                                     <a id="buttonEdit" className="btn btn-danger" href="/edit" role="button" >Edit</a>
                                 </ul>
                             </div>

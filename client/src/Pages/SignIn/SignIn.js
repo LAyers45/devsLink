@@ -40,7 +40,8 @@ class SignIn extends Component {
                         return this.props.updateUserInfo({
                             loggedIn: true,
                             username: res.data.username,
-                            email: res.data.email
+                            email: res.data.email,
+                            // id: res.data.id
                         });
                     }
 
