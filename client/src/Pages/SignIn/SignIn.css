@@ -15,6 +15,20 @@
     width: 45%;
     padding: 2%;
     border-radius: 15px;
+    margin: 6% 0;
+}
+.row-signin-header{
+    display: flex;
+    align-items: center;
+    justify-content: start;;
+    width: 100%;
+}
+.header-button-wrapper{
+    width: 35%;
+}
+.header-wrapper{
+    width: 75%;
+    display: flex;
 }
 .backButton{
     box-shadow:0 0 6px #add8ff;
@@ -39,8 +53,7 @@
 .sign-in-form-group{
     margin-top: 5%;
 }
-.signin-label{
-    font-family: 'Comfortaa', cursive;
+.sign-in-form-group label{
     color: #add8ff;
 }
 #signinbtn{

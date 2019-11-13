@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./UserPage";
 import API from "../../utils/API";
 import UserInfoCard from '../../components/UserInfoCard/UserInfoCard'
-import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 
 class UserPage extends Component {
@@ -23,7 +22,6 @@ class UserPage extends Component {
     render() {
         return (
             <React.Fragment>
-                <Navbar />
                 <UserInfoCard />
                 <Footer />
             </React.Fragment>

@@ -1,103 +1,92 @@
-.profile-pic{
-width: 80%;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.card{
-    cursor:default;
-    position: fixed;
-    background-image: linear-gradient(#282c34, #add8ff);
-    width: 45%;
-    padding: 5%;
-    height: 65%;
-    border-radius: 15px;
-    top: 20%;
-    left:28%;
-    border: none;
-}
-.username-info-card{
-    width: 85%;
+.user-dev-name{
+    cursor: default;
     font-family: 'Comfortaa', cursive;
+    text-transform: uppercase;
     font-size: 1.5em;
-    margin-left: 2%;
-    font-weight: bold;
-    color: #add8ff;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    margin-bottom: 5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #5a6f47;
+    position: relative;
 }
-.github{
+.user-dev-card-wrapper{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1.5% 0;
+}
+.user-dev-card{
+    background-color: #282c34;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: .5rem .5rem 3rem #add8ff;
+}
+.user-dev-card-back-img{
+    -webkit-clip-path: inset(0 0 29% 0);
+    clip-path: inset(0 0 26% 0);
+    width: 16rem;
+    background-image: linear-gradient(#282c34, #add8ff);
+    margin-top: 1rem;
+    border-top-left-radius: 14%;
+    border-top-right-radius: 14%;
+}
+.user-dev-card-img{
+    margin-top: -19rem;
+    border-radius: 50%;
+    width: 10rem;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+}
+.user-dev-link-info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin-top: -3rem;
+    list-style: none;
+    padding: 0 10%;
+}
+.user-dev-link-info li a:hover{
+    color: white;
+    text-decoration: none;
+}
+.user-dev-email{
+    color: #add8ff;
     font-family: 'Comfortaa', cursive;
     font-size: 1em;
-    color: #add8ff;
 }
-.email{
+.user-dev-github{
+    color: #add8ff;
     font-family: 'Comfortaa', cursive;
     font-size: 1em;
-    color: #add8ff;
 }
-.website{
+.user-dev-website{
+    color: #add8ff;
     font-family: 'Comfortaa', cursive;
     font-size: 1em;
-    color: #add8ff;
 }
-.languages{
+.user-dev-language{
+    cursor: default;
+    color: #add8ff;
     font-family: 'Comfortaa', cursive;
     font-size: 1em;
-    color: #add8ff;
-}
-.user-card-span{
-    font-family: 'Open Sans', sans-serif;
 }
 #buttonEdit{
-    cursor: pointer;
-    margin-top: 15%;
-    width:25%;
-    float: right;
+    width: 45%;
+    margin: 6% 0;
 }
-.user-card-respoonsive-col-info{
-    margin-top: 0%;
-}
-.user-card-respoonsive-col-pic{
-    margin-top: 0%;
-}
-@media only screen and (max-width: 600px) {
-    .profile-pic{
-        width: 110%;
-        }
-    .card{
-        width: 95%;
-        padding: 5%;
-        height: 55%;
-        top: 20%;
-        left:2.5%;
-    }
-    .username-info-card{
-    width: 85%;
-    font-family: 'Comfortaa', cursive;
-    font-size: 1.5em;
-    margin-left: 2%;
-    font-weight: bold;
-    color: #add8ff;
-}
-    .github{
-        font-size: 1em;
-    }
-    .email{
-        font-size: 1em;
-    }
-    .website{
-        font-size: 1em;
-    }
-    .languages{
-        font-family: 'Comfortaa', cursive;
-        font-size: 1em;
-        color: #add8ff;
-    }
-    .user-card-respoonsive-col-info{
-        margin-top: 5%;
-    }
-    .user-card-respoonsive-col-pic{
-        margin-top: 5%;
-    }
-    #buttonEdit{
-        margin-top: 18%;
-        width:25%;
-        float: right;
-    }
-  }
