@@ -7,6 +7,7 @@ import DevWorks from '../../images/dev-works.png';
 import UserProfile from '../../images/user-profile.png';
 import Project from '../../images/project.png';
 
+
 class MainPage extends Component {
     state = {}
 
