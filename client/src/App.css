@@ -1,6 +1,5 @@
 body {
   background-image: linear-gradient(to bottom, #282c34, #add8ff);
-  height: 100vmax;
   max-width: 100vmax;
   overflow-x: hidden;
 }
@@ -10,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url(../src/images/logo-multiple.png);
-  height: 100vmax;
+  height: 100vh;
   max-width: 100vmax;
 }
 

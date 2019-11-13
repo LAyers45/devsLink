@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
 import '../DevCard/DevCard.css';
 import DevCardBackGround from '../../images/dev-card-back.png';
 import ProfileImage from '../../images/default-profile-pic.png'

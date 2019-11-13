@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../DevSearch/DevSearch.css";
-import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 //import DevCard from '../../components/DevCard/DevCard'
 import DevSearchCards from '../../components/DevSearchCards/DevSearchCards';
@@ -103,7 +102,6 @@ class DevSearch extends Component {
             return (
                 <React.Fragment>
 
-                    <Navbar />
 
                     <div className='row'>
                         <DevSearchBar />

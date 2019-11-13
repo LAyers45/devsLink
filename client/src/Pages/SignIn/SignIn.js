@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./SignIn";
-import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
+import "./SignIn.css";
+import { Form, FormGroup, Label, Input } from 'reactstrap';
 import API from "../../utils/API";
 import Footer from '../../components/Footer/Footer'
 
@@ -64,8 +64,12 @@ class SignIn extends Component {
                 <div className="container-signin">
                     <Form className="signin-form">
                         <div className="row-signin-header">
-                            <a href="/"><button type="button" className="backButton "> &lt;</button></a>
-                            <h1 className="text-center">Sign In</h1>
+                            <div className="header-button-wrapper">
+                                <a href="/"><button type="button" className="backButton "> &lt;</button></a>
+                            </div>
+                            <div className="header-wrapper">
+                                <h1 className="text-center">Sign In</h1>
+                            </div>
                         </div>
                         <FormGroup className="sign-in-form-group">
                             <Label>User Name</Label>

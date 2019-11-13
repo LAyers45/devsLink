@@ -33,7 +33,7 @@
     align-content: center;
     align-items: center;
     justify-content: center;
-    box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, 2)
+    box-shadow: .5rem .5rem 3rem #add8ff;
 }
 .dev-card-back-img{
     -webkit-clip-path: inset(0 0 29% 0);
@@ -58,8 +58,11 @@
     text-align: center;
     align-content: center;
     align-items: center;
-    height: 10rem;
     margin-top: -3rem;
+    list-style: none;
+}
+li:hover{
+    color: white;
 }
 .dev-email{
     color: #add8ff;

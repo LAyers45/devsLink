@@ -1,15 +1,20 @@
 import React from 'react';
 import logo from '../../images/devs-link-logo.png';
 import './Navbar.css';
-// import AnimationJs from './navAnimation';
+import '../SideDrawer/DrawerToggleButton'
+import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 
 
 
 
-export default function navbar() {
+
+const navbar = props => {
     return (
         <React.Fragment>
             <nav className="navbar">
+                <div className="navbar-togglebutton">
+                    <DrawerToggleButton click={props.drawerClickHandler} />
+                </div>
                 <div className='nav-logo'>
                     <a className="anchor-nav" href="/main"> <img src={logo} className="App-logo" alt="logo" /></a>
                 </div>
@@ -19,16 +24,12 @@ export default function navbar() {
                     <li ><a className="anchor-nav" href="/user">User Profile</a></li>
                     <li ><a className="anchor-nav" href="/project">Project</a></li>
                 </ul>
-                <div className="burger">
-                    <div className="line1"></div>
-                    <div className="line2"></div>
-                    <div className="line3"></div>
-                </div>
 
             </nav>
-            {/* <script src={AnimationJs}></script> */}
         </React.Fragment>
-
-
     )
+
+
 }
+
+export default navbar;
