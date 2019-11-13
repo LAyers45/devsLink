@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-
+const bcrypt = require("bcryptjs")
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
@@ -39,6 +39,23 @@ var UserSchema = new Schema({
         data: Buffer, contentType: String
     }
 });
+
+UserSchema.methods = {
+    passHash: plainTextPassword => {
+        return bcrypt.hashSync(plainTextPassword, 10)
+    },
+    passwordConfirm: function (password) {
+        return bcrypt.compareSync(password, this.password)
+    }
+
+}
+
+UserSchema.pre('save', function (next) {
+    this.password = this.passHash(this.password)
+    next()
+
+
+})
 
 var User = mongoose.model("User", UserSchema);
 
