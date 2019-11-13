@@ -19,9 +19,11 @@ import BackDrop from '../src/components/BackDrop/BackDrop'
 import Navbar from './components/Navbar/Navbar';
 
 
-
 class App extends Component {
   state = {
+    username: null,
+    email: null,
+    loggedIn: false
     SideDrawerOpen: false
   }
   drawerToggleClickHandler = () => {
@@ -34,35 +36,23 @@ class App extends Component {
     this.setState({ SideDrawerOpen: false })
   };
 
-  constructor() {
-    super();
-    this.state = {
-      username: null,
-      email: null,
-      loggedIn: false
-    };
-    this.componentDidMount = this.componentDidMount.bind(this);
-    this.bindUser = this.bindUser.bind(this);
-    this.updateUserInfo = this.updateUserInfo.bind(this);
-  }
-
   componentDidMount() {
     this.bindUser();
   }
 
-  updateUserInfo(info) {
+  updateUserInfo = (info) => {
     this.setState(info)
   }
 
-  bindUser() {
-    axios.get("api/users/").then(res => {
+  bindUser = () => {
+    axios.get("/api/user/").then(res => {
       if (res.data.user) {
         console.log("Congrats there is a user");
         console.log(res.data.user.username);
         this.setState({
           username: res.data.user.username,
           email: res.data.user.email,
-          loggedIn: res.data.user.loggedIn
+          loggedIn: true
         });
       } else {
         console.log("Curses there is no user");
@@ -86,7 +76,6 @@ class App extends Component {
       <Router>
         <div className="App">
           <Switch>
-
             <Route exact path="/" render={() => (
               <Onload
                 username={this.state.username}
@@ -101,6 +90,7 @@ class App extends Component {
                 username={this.state.username}
                 email={this.state.username}
                 loggedIn={this.state.loggedIn}
+                updateUserInfo={this.updateUserInfo}
               />
             )}
             />

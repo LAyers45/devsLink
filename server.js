@@ -1,9 +1,25 @@
 const express = require("express");
-
+const passport = require("passport");
 const mongoose = require("mongoose");
+// const dataConnect = require("./config/")
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+const session = require('express-session');
+
+app.use(express.static("public"));
+app.use(session({ secret: "batman", resave: false, saveUninitialized: false }));
+app.use(passport.initialize());
+app.use(passport.session());
+require("./config/passport")(passport);
+app.use((req, res, next) => {
+  console.log("req.session", req.session);
+  console.log("req.user", req.user);
+
+  return next();
+})
+
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));

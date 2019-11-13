@@ -3,7 +3,7 @@ import "./SignIn.css";
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 import API from "../../utils/API";
 import Footer from '../../components/Footer/Footer'
-
+import { Redirect } from "react-router-dom"
 
 
 
@@ -13,7 +13,8 @@ class SignIn extends Component {
         username: "",
         password: "",
         onSuccess: "",
-        onFailure: ""
+        onFailure: "",
+        acquiredPath: null
 
     };
 
@@ -36,16 +37,18 @@ class SignIn extends Component {
                     console.log(res.data)
                     if (res.status === 200) {
                         console.log("Success")
-                        this.setState({
-                            onSuccess: "Signin was successful",
-                            onFailure: ""
-                        });
-                        this.props.bindUser({
+                        return this.props.updateUserInfo({
+                            loggedIn: true,
                             username: res.data.username,
-                            id: res.data._id,
-                            loggedIn: true
+                            email: res.data.email
                         });
                     }
+
+                    this.setState({
+                        onSuccess: "",
+                        onFailure: "System Error"
+                    })
+
                 })
 
                 .catch(err =>
@@ -58,6 +61,10 @@ class SignIn extends Component {
     }
 
     render() {
+        if (this.props.loggedIn) {
+            return <Redirect to={{ pathname: '/main' }} />
+        }
+
         return (
 
             <React.Fragment>
