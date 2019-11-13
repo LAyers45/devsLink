@@ -26,17 +26,26 @@ class EditUser extends Component {
         });
     };
 
-    // handleFormSubmit = event => {
-    //     event.preventDefault();
-    //     API.updateInfo(this.props.id)
-    //         .then(res => this.set)
+    handleFormSubmit = event => {
+        event.preventDefault();
+        API.updateInfo(this.props.id)
+            .then(res => {
+                console.log(res.data)
+                this.setState({
+                    github: this.state.github,
+                    website: this.state.website,
+                    specialization: this.state.specialization
+                })
 
-    //         .catch(err => this.setState({
-    //             onSuccess: "",
-    //             onFailure: "Unsuccessful Signup"
-    //         })
-    //         );
-    // };
+
+            })
+
+            .catch(err => this.setState({
+                onSuccess: "",
+                onFailure: "Unsuccessful Signup"
+            })
+            );
+    };
 
     render() {
         return (
@@ -52,7 +61,9 @@ class EditUser extends Component {
                         </div>
                         <div className="edit-user-dev-link-info">
                             <span className="user-card-span">Email:</span>
-                            <Input className="email" placeholder={this.props.email}>
+                            <Input
+                                className="email"
+                                placeholder={this.props.email}>
                             </Input>
                             <span className="user-card-span">Github:</span>
                             <Input className="github" placeholder={this.props.github}>
