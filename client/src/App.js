@@ -23,7 +23,7 @@ class App extends Component {
   state = {
     username: null,
     email: null,
-    loggedIn: false
+    loggedIn: false,
     SideDrawerOpen: false
   }
   drawerToggleClickHandler = () => {

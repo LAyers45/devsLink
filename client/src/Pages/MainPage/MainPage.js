@@ -7,6 +7,7 @@ import DevWorks from '../../images/dev-works.png';
 import UserProfile from '../../images/user-profile.png';
 import Project from '../../images/project.png';
 
+
 class MainPage extends Component {
     state = {}
 
@@ -26,7 +27,7 @@ class MainPage extends Component {
 
             < div >
 
-                <Navbar />
+
                 <div className='main-page-container'>
                     <div className='main-page-row'>
 
