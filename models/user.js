@@ -34,10 +34,8 @@ var UserSchema = new Schema({
         type: String,
         trim: true
     },
-    image:
-    {
-        data: Buffer, contentType: String
-    }
+    github: { type: String },
+    website: { type: String }
 });
 
 UserSchema.methods = {

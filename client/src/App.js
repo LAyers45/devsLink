@@ -24,7 +24,11 @@ class App extends Component {
     username: null,
     email: null,
     loggedIn: false,
-    SideDrawerOpen: false
+    id: null,
+    SideDrawerOpen: false,
+    github: null,
+    website: null,
+    specialization: null
   }
   drawerToggleClickHandler = () => {
     this.setState((prevState) => {
@@ -50,10 +54,16 @@ class App extends Component {
         console.log("Congrats there is a user");
         console.log(res.data.user._id);
         console.log(res.data.user.username);
+        // console.log(res.data.user)
         this.setState({
           username: res.data.user.username,
           email: res.data.user.email,
-          loggedIn: true
+          id: res.data.user._id,
+          loggedIn: true,
+          github: res.data.user.github,
+          website: res.data.user.website,
+          specialization: res.data.user.specialization
+
         });
       } else {
         console.log("Curses there is no user");
@@ -80,7 +90,7 @@ class App extends Component {
             <Route exact path="/" render={() => (
               <Onload
                 username={this.state.username}
-                email={this.state.username}
+                email={this.state.email}
                 loggedIn={this.state.loggedIn}
               />
             )}
@@ -89,7 +99,7 @@ class App extends Component {
             <Route exact path="/signin" render={() => (
               <Signin
                 username={this.state.username}
-                email={this.state.username}
+                email={this.state.email}
                 loggedIn={this.state.loggedIn}
                 updateUserInfo={this.updateUserInfo}
               />
@@ -99,7 +109,7 @@ class App extends Component {
             <Route exact path="/signup" render={() => (
               <Signup
                 username={this.state.username}
-                email={this.state.username}
+                email={this.state.email}
                 loggedIn={this.state.loggedIn}
               />
             )}
@@ -112,7 +122,7 @@ class App extends Component {
                 {backdrop}
                 <Main
                   username={this.state.username}
-                  email={this.state.username}
+                  email={this.state.email}
                   loggedIn={this.state.loggedIn}
                 />
               </React.Fragment>
@@ -126,8 +136,12 @@ class App extends Component {
                 {backdrop}
                 <UserPage
                   username={this.state.username}
-                  email={this.state.username}
+                  email={this.state.email}
                   loggedIn={this.state.loggedIn}
+                  id={this.state.id}
+                  github={this.state.github}
+                  website={this.state.website}
+                  specialization={this.state.specialization}
                 />
               </React.Fragment>
             )}
@@ -140,7 +154,7 @@ class App extends Component {
                 {backdrop}
                 <DevSearch
                   username={this.state.username}
-                  email={this.state.username}
+                  email={this.state.email}
                   loggedIn={this.state.loggedIn}
                 />
               </React.Fragment>
@@ -154,7 +168,7 @@ class App extends Component {
                 {backdrop}
                 <DevWorks
                   username={this.state.username}
-                  email={this.state.username}
+                  email={this.state.email}
                   loggedIn={this.state.loggedIn}
                 />
               </React.Fragment>
@@ -168,8 +182,12 @@ class App extends Component {
                 {backdrop}
                 <EditUser
                   username={this.state.username}
-                  email={this.state.username}
+                  email={this.state.email}
                   loggedIn={this.state.loggedIn}
+                  id={this.state.id}
+                  github={this.state.github}
+                  website={this.state.website}
+                  specialization={this.state.specialization}
                 />
               </React.Fragment>
             )}
@@ -182,7 +200,7 @@ class App extends Component {
                 {backdrop}
                 <Project
                   username={this.state.username}
-                  email={this.state.username}
+                  email={this.state.email}
                   loggedIn={this.state.loggedIn}
                 />
               </React.Fragment>
@@ -196,7 +214,7 @@ class App extends Component {
                 {backdrop}
                 <CreateProject
                   username={this.state.username}
-                  email={this.state.username}
+                  email={this.state.email}
                   loggedIn={this.state.loggedIn}
                 />
               </React.Fragment>
@@ -210,7 +228,7 @@ class App extends Component {
                 {backdrop}
                 <EditProject
                   username={this.state.username}
-                  email={this.state.username}
+                  email={this.state.email}
                   loggedIn={this.state.loggedIn}
                 />
               </React.Fragment>
