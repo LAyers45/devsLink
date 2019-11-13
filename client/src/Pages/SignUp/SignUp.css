@@ -19,7 +19,15 @@
 .row-signup-header{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;;
+    width: 100%;
+}
+.header-button-wrapper{
+    width: 35%;
+}
+.header-wrapper{
+    width: 75%;
+    display: flex;
 }
 .backButton{
     box-shadow:0 0 6px #add8ff;
@@ -30,15 +38,13 @@
     border: none;
     border-radius: 80px;
     width: 30px;
-    float: left;
-  
+    margin-right: 5%;
 }
 .text-center{
     font-family: 'Comfortaa', cursive;
     font-size: 2em;
     font-weight: bold;
     color: #add8ff;
-    margin-left: 3%;
     margin-top: 1.5%;
 }
 .sign-up-form-group{

@@ -1,12 +1,10 @@
 import React from "react";
 import "./Main.css";
-import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import DevSearch from '../../images/dev-search.png';
 import DevWorks from '../../images/dev-works.png';
 import UserProfile from '../../images/user-profile.png';
 import Project from '../../images/project.png';
-import LogCheck from '../../components/Logincheck/Logincheck'
 
 
 
@@ -18,7 +16,6 @@ function MainPage() {
 
         < div >
 
-            <Navbar />
             <div className='main-page-container'>
                 <div className='main-page-row'>
 

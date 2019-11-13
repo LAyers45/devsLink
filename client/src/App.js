@@ -14,9 +14,26 @@ import EditUser from './Pages/EditUser/EditUser';
 import Project from './Pages/Project/Project';
 import CreateProject from './Pages/CreateProject/CreateProject';
 import EditProject from './Pages/EditProject/EditProject';
+import SideDrawer from '../src/components/SideDrawer/SideDrawer';
+import BackDrop from '../src/components/BackDrop/BackDrop'
+import Navbar from './components/Navbar/Navbar';
+
 
 
 class App extends Component {
+  state = {
+    SideDrawerOpen: false
+  }
+  drawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return { SideDrawerOpen: !prevState.SideDrawerOpen }
+    });
+  };
+
+  backdropClickHandler = () => {
+    this.setState({ SideDrawerOpen: false })
+  };
+
   constructor() {
     super();
     this.state = {
@@ -60,6 +77,11 @@ class App extends Component {
 
 
   render() {
+    let backdrop;
+
+    if (this.state.SideDrawerOpen) {
+      backdrop = <BackDrop click={this.backdropClickHandler} />;
+    }
     return (
       <Router>
         <div className="App">
@@ -93,74 +115,114 @@ class App extends Component {
             />
 
             <Route exact path="/main" render={() => (
-              <Main
-                username={this.state.username}
-                email={this.state.username}
-                loggedIn={this.state.loggedIn}
-              />
+              <React.Fragment>
+                <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+                <SideDrawer show={this.state.SideDrawerOpen} />
+                {backdrop}
+                <Main
+                  username={this.state.username}
+                  email={this.state.username}
+                  loggedIn={this.state.loggedIn}
+                />
+              </React.Fragment>
             )}
             />
 
             <Route exact path="/user" render={() => (
-              <UserPage
-                username={this.state.username}
-                email={this.state.username}
-                loggedIn={this.state.loggedIn}
-              />
+              <React.Fragment>
+                <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+                <SideDrawer show={this.state.SideDrawerOpen} />
+                {backdrop}
+                <UserPage
+                  username={this.state.username}
+                  email={this.state.username}
+                  loggedIn={this.state.loggedIn}
+                />
+              </React.Fragment>
             )}
             />
 
             <Route exact path="/devsearch" render={() => (
-              <DevSearch
-                username={this.state.username}
-                email={this.state.username}
-                loggedIn={this.state.loggedIn}
-              />
+              <React.Fragment>
+                <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+                <SideDrawer show={this.state.SideDrawerOpen} />
+                {backdrop}
+                <DevSearch
+                  username={this.state.username}
+                  email={this.state.username}
+                  loggedIn={this.state.loggedIn}
+                />
+              </React.Fragment>
             )}
             />
 
             <Route exact path="/devworks" render={() => (
-              <DevWorks
-                username={this.state.username}
-                email={this.state.username}
-                loggedIn={this.state.loggedIn}
-              />
+              <React.Fragment>
+                <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+                <SideDrawer show={this.state.SideDrawerOpen} />
+                {backdrop}
+                <DevWorks
+                  username={this.state.username}
+                  email={this.state.username}
+                  loggedIn={this.state.loggedIn}
+                />
+              </React.Fragment>
             )}
             />
 
             <Route exact path="/edit" render={() => (
-              <EditUser
-                username={this.state.username}
-                email={this.state.username}
-                loggedIn={this.state.loggedIn}
-              />
+              <React.Fragment>
+                <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+                <SideDrawer show={this.state.SideDrawerOpen} />
+                {backdrop}
+                <EditUser
+                  username={this.state.username}
+                  email={this.state.username}
+                  loggedIn={this.state.loggedIn}
+                />
+              </React.Fragment>
             )}
             />
 
             <Route exact path="/project" render={() => (
-              <Project
-                username={this.state.username}
-                email={this.state.username}
-                loggedIn={this.state.loggedIn}
-              />
+              <React.Fragment>
+                <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+                <SideDrawer show={this.state.SideDrawerOpen} />
+                {backdrop}
+                <Project
+                  username={this.state.username}
+                  email={this.state.username}
+                  loggedIn={this.state.loggedIn}
+                />
+              </React.Fragment>
             )}
             />
 
             <Route exact path="/createproject" render={() => (
-              <CreateProject
-                username={this.state.username}
-                email={this.state.username}
-                loggedIn={this.state.loggedIn}
-              />
+              <React.Fragment>
+                <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+                <SideDrawer show={this.state.SideDrawerOpen} />
+                {backdrop}
+                <CreateProject
+                  username={this.state.username}
+                  email={this.state.username}
+                  loggedIn={this.state.loggedIn}
+                />
+              </React.Fragment>
             )}
             />
 
             <Route exact path="/editproject" render={() => (
-              <EditProject
-                username={this.state.username}
-                email={this.state.username}
-                loggedIn={this.state.loggedIn}
-              />
+              <React.Fragment>
+                <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+                <SideDrawer show={this.state.SideDrawerOpen} />
+                {backdrop}
+                <EditProject
+                  username={this.state.username}
+                  email={this.state.username}
+                  loggedIn={this.state.loggedIn}
+                />
+              </React.Fragment>
             )}
             />
 

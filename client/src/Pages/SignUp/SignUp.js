@@ -4,7 +4,7 @@ import API from "../../utils/API";
 //import { Container, Row } from "../../components/Container/Container";
 //import { Input, TextArea, FormBtn } from "../../components/Form";
 
-import { Container, Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Form, FormGroup, Label, Input } from 'reactstrap';
 import { GithubLoginButton } from "react-social-login-buttons";
 import Footer from '../../components/Footer/Footer';
 
@@ -80,8 +80,12 @@ class SignUp extends Component {
                 <div className="container-signup">
                     <Form className="signup-form">
                         <div className="row-signup-header">
+                        <div className="header-button-wrapper">
                             <a href="/"><button type="button" className="backButton "> &lt;</button></a>
+                            </div>
+                            <div className="header-wrapper">
                             <h1 className="text-center">Sign Up</h1>
+                            </div>
                         </div>
                         <FormGroup className="sign-up-form-group">
                             <Label>User Name</Label>
