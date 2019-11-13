@@ -23,7 +23,7 @@ class App extends Component {
   state = {
     username: null,
     email: null,
-    loggedIn: false
+    loggedIn: false,
     SideDrawerOpen: false
   }
   drawerToggleClickHandler = () => {
@@ -48,6 +48,7 @@ class App extends Component {
     axios.get("/api/user/").then(res => {
       if (res.data.user) {
         console.log("Congrats there is a user");
+        console.log(res.data.user._id);
         console.log(res.data.user.username);
         this.setState({
           username: res.data.user.username,

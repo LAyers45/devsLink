@@ -51,9 +51,9 @@ router.post("/signin", passport.authenticate("local"), (req, res) => {
 
 
 
-// Matches with "/api/users/:username"
+// Matches with "/api/users/"
 router
-  .route("/:username")
+  .route("/")
   .get(userController.findById)
   .put(userController.update)
   .delete(userController.remove);
