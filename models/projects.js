@@ -15,16 +15,13 @@ var ProjectSchema = new Schema({
         trim: true,
         required: "Host is Required",
     },
-    description:
-    {
+    description: {
         type: String
     },
-    languages:
-    {
+    languages: {
         type: String
     },
-    availability:
-    {
+    availability: {
         type: Boolean
     }
 
