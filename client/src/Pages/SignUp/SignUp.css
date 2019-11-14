@@ -19,32 +19,22 @@
 .row-signup-header{
     display: flex;
     align-items: center;
-    justify-content: start;;
+    justify-content:left;
     width: 100%;
 }
-.header-button-wrapper{
-    width: 35%;
-}
-.header-wrapper{
-    width: 75%;
+.back-button-wrapper{
     display: flex;
+
 }
-.backButton{
-    box-shadow:0 0 6px #add8ff;
-    cursor: pointer;
-    font-family: 'Comfortaa', cursive;
-    background-image: linear-gradient(#add8ff, #6c839b);  
-    color:white;
-    border: none;
-    border-radius: 80px;
-    width: 30px;
-    margin-right: 5%;
+.back_button{
+    width: 50%;
 }
 .text-center{
     font-family: 'Comfortaa', cursive;
     font-size: 2em;
     font-weight: bold;
     color: #add8ff;
+    margin-left: 6%;
     margin-top: 1.5%;
 }
 .sign-up-form-group{

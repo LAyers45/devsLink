@@ -1,0 +1,13 @@
+.project-page-container{
+margin-top: 3%;
+ 
+}
+.project-page-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.project-card-view{
+    width: 58vw;
+}
