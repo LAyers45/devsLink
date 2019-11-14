@@ -9,5 +9,11 @@ export default {
   },
   updateInfo: function (id) {
     return axios.put("api/user/" + id)
+  },
+  getDevs: function () {
+    return axios.get("/api/devs")
+  },
+  getDev: function (id) {
+    return axios.get("/api/devs/" + id)
   }
 };

@@ -6,30 +6,45 @@ import ProfileImage from '../../images/default-profile-pic.png'
 
 
 
-const DevSearchCards = (props) => {
+class DevSearchCards extends Component {
 
-    return (
-        <React.Fragment>
+    state = {
+        email: this.props.email,
+        username: this.props.username,
+        id: this.props.id,
+        github: this.props.github,
+        website: this.props.website,
+        specialization: this.props.specialization
+    };
 
-            <div className="section">
-                <div className="dev-card-wrapper">
-                    <div className="dev-card">
-                        <img src={DevCardBackGround} alt="dev card background" className="dev-card-back-img" />
-                        <img src={ProfileImage} alt="dev profile image" className="dev-card-img" />
-                        <h1 className="dev-name">
-                            DonRiche
+
+
+    componentDidMount() { }
+
+    render() {
+        return (
+            <React.Fragment>
+
+                <div className="section">
+                    <div className="dev-card-wrapper">
+                        <div className="dev-card">
+                            <img src={DevCardBackGround} alt="dev card background" className="dev-card-back-img" />
+                            <img src={ProfileImage} alt="dev profile image" className="dev-card-img" />
+                            <h1 className="dev-name">
+                                DonRiche
                                     </h1>
-                        <ul className="dev-link-info">
-                            <h2>{props.name}</h2>
-                            <h3>{props.email}</h3>
+                            <ul className="dev-link-info">
+                                <h2>{this.props.name}</h2>
+                                <h3>{this.props.email}</h3>
 
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </React.Fragment>
-    )
-}
+            </React.Fragment >
+        )
+    }
+};
 
 export default DevSearchCards;
