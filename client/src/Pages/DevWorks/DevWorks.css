@@ -1,0 +1,16 @@
+.devworks-page-container{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+.devworks-page-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+.project-card{
+    width: 40%;
+}

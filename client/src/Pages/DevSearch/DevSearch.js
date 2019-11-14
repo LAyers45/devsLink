@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 
 
 
+
 class DevSearch extends Component {
 
 
@@ -50,15 +51,18 @@ class DevSearch extends Component {
         //     return <div>Loading...</div>
         // }
 
+
         // else {
 
         return (
             <React.Fragment>
 
 
+
                 <div className='row'>
                     <DevSearchBar />
                     <div className='column'>
+
 
                         {this.state.devs.length ? (
                             <DevSearchList>
