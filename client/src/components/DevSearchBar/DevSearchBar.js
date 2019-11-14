@@ -1,12 +1,13 @@
 import React from 'react';
-import '../DevSearchBar/DevSearchBar.css'
+import '../DevSearchBar/DevSearchBar.css';
+import './DevSearchBar.css'
 
 const DevSearchBar = (props) => {
     return (
         <form className="search-area">
             <div className="form-group">
-                <label htmlFor="searchDevs">Search For Develepers</label>
-                <form >
+                <label className="devsearchbar-label" htmlFor="searchDevs">Search for Devs</label>
+                <form className="devsearchbar-form">
                     <input
                         value={props.search}
                         onChange={props.handleInputChange}
@@ -14,7 +15,7 @@ const DevSearchBar = (props) => {
                         username=""
                         email=""
                         className="form-control"
-                        placeholder="Search for other Developers"
+                        placeholder="Dev Name"
                         id=""
                     />
                     <button type="submit" onClick={props.handleFormSubmit}>Search</button>

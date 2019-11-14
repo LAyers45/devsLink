@@ -11,6 +11,8 @@ import { bindActionCreators } from 'redux';
 // import store from "../../store";
 import { connect } from 'react-redux';
 import { signIn } from '../../actions';
+import BackButton from '../../images/back_button.png';
+
 
 // npm install bootstrap reactstrap react-social-login-buttons
 
@@ -89,7 +91,9 @@ class SignUp extends Component {
                     <div className="container-signup">
                         <Form className="signup-form">
                             <div className="row-signup-header">
-                                <a href="/"><button type="button" className="backButton "> &lt;</button></a>
+                                <div className="back-button-wrapper">
+                                    <a href="/"><img src={BackButton} className="back_button" alt="back button" /></a>
+                                </div>
                                 <h1 className="text-center">Sign Up</h1>
                             </div>
                             <FormGroup className="sign-up-form-group">

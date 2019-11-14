@@ -8,6 +8,7 @@ import DevSearchBar from "../../components/DevSearchBar/DevSearchBar";
 
 
 
+
 class DevSearch extends Component {
 
     // state = {
@@ -95,7 +96,9 @@ class DevSearch extends Component {
         var { isLoaded, items } = this.state;
 
         if (!isLoaded) {
-            return <div>Loading...</div>
+            return <div className="load-container">
+                <div className="loading-div">Loading...</div>
+            </div>
         }
 
         else {
@@ -104,8 +107,8 @@ class DevSearch extends Component {
                 <React.Fragment>
 
 
+                    <DevSearchBar />
                     <div className='row'>
-                        <DevSearchBar />
                         <div className='column'>
                             <DevSearchCards
                                 item={this.state.items}
