@@ -7,7 +7,7 @@ export default {
   signup: function (userInfo) {
     return axios.post("api/user/signup", userInfo)
   },
-  getUser: function (userID) {
-    return axios.get("api/users/:id", userID)
+  updateInfo: function (id) {
+    return axios.put("api/user/" + id)
   }
 };

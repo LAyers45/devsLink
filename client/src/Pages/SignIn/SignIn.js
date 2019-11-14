@@ -43,8 +43,10 @@ class SignIn extends Component {
                         });
                         this.props.bindUser({
                             username: res.data.username,
-                            id: res.data._id,
-                            loggedIn: true
+
+                            email: res.data.email,
+                            // id: res.data.id
+
                         });
                     }
                 })

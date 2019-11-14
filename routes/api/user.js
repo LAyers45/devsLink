@@ -48,12 +48,9 @@ router.post("/signin", passport.authenticate("local"), (req, res) => {
   res.send(userData);
 });
 
-
-
-
 // Matches with "/api/users/"
 router
-  .route("/")
+  .route("/:id")
   .get(userController.findById)
   .put(userController.update)
   .delete(userController.remove);
