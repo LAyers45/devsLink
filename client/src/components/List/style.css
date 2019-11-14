@@ -1,0 +1,122 @@
+.list-overflow-container {
+  max-height: 545px;
+  border: 1px #DDDDDD solid;
+  border-radius: 4px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.list-overflow-container ul {
+  margin: 0;
+}
+
+.list-overflow-container li {
+  border-radius: 0px;
+  border-left: none;
+  border-right: none;
+}
+
+.list-overflow-container li * {
+  cursor: pointer;
+}
+
+.list-overflow-container li a {
+  color: #2A878C;
+}
+
+.list-overflow-container li:first-child {
+  border-top: none;
+}
+
+.list-overflow-container li:last-child {
+  border-bottom: none;
+}
+
+/* devcard style */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.dev-name{
+  cursor: default;
+  font-family: 'Comfortaa', cursive;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 3px;
+  margin-right: -3px;
+  margin-bottom: 5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #5a6f47;
+  position: relative;
+}
+.dev-card-wrapper{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 1% 0;
+}
+.dev-card{
+  background-color: #282c34;
+  border-radius: 14%;
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  box-shadow: .5rem .5rem 3rem #add8ff;
+}
+.dev-card-back-img{
+  -webkit-clip-path: inset(0 0 29% 0);
+  clip-path: inset(0 0 26% 0);
+  width: 16rem;
+  background-image: linear-gradient(#282c34, #add8ff);
+  margin-top: 1rem;
+  border-top-left-radius: 14%;
+  border-top-right-radius: 14%;
+}
+.dev-card-img{
+  margin-top: -19rem;
+  border-radius: 50%;
+  width: 10rem;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+}
+.dev-link-info{
+  display: flex;
+  flex-direction: column;
+  width: 16rem;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  margin-top: -3rem;
+  list-style: none;
+}
+li:hover{
+  color: white;
+}
+.dev-email{
+  color: #add8ff;
+  font-family: 'Comfortaa', cursive;
+  font-size: 1em;
+}
+.dev-github{
+  color: #add8ff;
+  font-family: 'Comfortaa', cursive;
+  font-size: 1em;
+}
+.dev-website{
+  color: #add8ff;
+  font-family: 'Comfortaa', cursive;
+  font-size: 1em;
+}
+.dev-language{
+  color: #add8ff;
+  font-family: 'Comfortaa', cursive;
+  font-size: 1em;
+}
