@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./UserPage";
-import API from "../../utils/API";
 import UserInfoCard from '../../components/UserInfoCard/UserInfoCard'
 import Footer from '../../components/Footer/Footer'
 import DevCardBackGround from '../../images/dev-card-back.png';

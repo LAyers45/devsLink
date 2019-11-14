@@ -1,20 +1,14 @@
+import BackButton from '../../images/back_button.png';
 import React, { Component } from "react";
 import "./SignUp.css";
 import API from "../../utils/API";
-//import { Container, Row } from "../../components/Container/Container";
-//import { Input, TextArea, FormBtn } from "../../components/Form";
-
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 import Footer from '../../components/Footer/Footer';
 import { Redirect } from "react-router-dom"
 import { bindActionCreators } from 'redux';
-// import store from "../../store";
 import { connect } from 'react-redux';
 import { signIn } from '../../actions';
-import BackButton from '../../images/back_button.png';
 
-
-// npm install bootstrap reactstrap react-social-login-buttons
 
 class SignUp extends Component {
     state = {
@@ -90,11 +84,8 @@ class SignUp extends Component {
                 <React.Fragment>
                     <div className="container-signup">
                         <Form className="signup-form">
-                            <div className="row-signup-header">
-                                <div className="back-button-wrapper">
-                                    <a href="/"><img src={BackButton} className="back_button" alt="back button" /></a>
-                                </div>
-                                <h1 className="text-center">Sign Up</h1>
+                            <div className="back-button-wrapper">
+                                <a href="/"><img src={BackButton} className="back_button" alt="back button" /></a>
                             </div>
                             <FormGroup className="sign-up-form-group">
                                 <Label>User Name</Label>
