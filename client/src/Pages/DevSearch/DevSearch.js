@@ -71,10 +71,11 @@ class DevSearch extends Component {
                                         <Link to={"/devs/" + dev._id}>
                                             <h1 className="dev-name">
                                                 {dev.username}
+                                                <div>{dev.email}</div>
                                             </h1>
                                             <ul className="dev-link-info">
 
-                                                <div>{dev.email}</div>
+
 
                                             </ul>
 
