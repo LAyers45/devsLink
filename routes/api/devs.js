@@ -11,4 +11,13 @@ router.route("/:id")
     .put(devsController.update)
     .delete(devsController.remove);
 
+// allows query
+router.get("/devs", (req, res) => {
+    axios
+        .get({ params: req.query })
+        .then(({ data: { results } }) => res.json(results));
+})
+
+
+
 module.exports = router;

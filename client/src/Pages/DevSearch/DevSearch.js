@@ -36,6 +36,21 @@ class DevSearch extends Component {
             .catch(err => console.log(err));
     };
 
+    handleInputChange = event => {
+
+        const { name, value } = event.target;
+        this.setState({
+            [name]: value
+        });
+    };
+
+    handleFormSubmit = event => {
+
+        event.preventDefault();
+        API.getDev(this.state.devSearch)
+            .then(res => this.setState({ devs: res.data, username: "", email: "" }))
+            .catch(err => console.log(err));
+    };
 
 
 
@@ -60,7 +75,12 @@ class DevSearch extends Component {
 
 
                 <div className='row'>
-                    <DevSearchBar />
+                    <DevSearchBar
+                        name="searchField"
+                        value={this.state.devSearch}
+                        onChange={this.handleInputChange}
+                        placeholder="Search For other Developers"
+                    />
                     <div className='column'>
 
 
@@ -71,10 +91,11 @@ class DevSearch extends Component {
                                         <Link to={"/devs/" + dev._id}>
                                             <h1 className="dev-name">
                                                 {dev.username}
+                                                <div>{dev.email}</div>
                                             </h1>
                                             <ul className="dev-link-info">
 
-                                                <div>{dev.email}</div>
+                                                {/* <div>{dev.email}</div> */}
 
                                             </ul>
 

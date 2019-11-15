@@ -13,7 +13,7 @@ export default {
   getDevs: function () {
     return axios.get("/api/devs")
   },
-  getDev: function (id) {
-    return axios.get("/api/devs/" + id)
+  getDev: function (query) {
+    return axios.get("/api/devs/", { params: { q: query } })
   }
 };

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import '../DevCard/DevCard.css';
+//import React, { Component } from 'react';
+//import '../DevCard/DevCard.css';
 import DevCardBackGround from '../../images/dev-card-back.png';
 import ProfileImage from '../../images/default-profile-pic.png'
 
