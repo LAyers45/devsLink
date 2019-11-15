@@ -28,17 +28,26 @@ class EditUser extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        API.updateInfo(this.props.id)
+        API.updateInfo(this.props.id, {
+            "github": this.state.github,
+            "website": this.state.website,
+            "specialization": this.state.specialization
+
+        })
             .then(res => {
                 console.log(res.data)
-                this.setState({
-                    github: this.state.github,
-                    website: this.state.website,
-                    specialization: this.state.specialization
-                })
-
-
+                if (res.status === 200) {
+                    console.log("Success")
+                    return this.props.updateUserInfo({
+                        github: res.data.github,
+                        website: res.data.website,
+                        specialization: res.data.specialization
+                        // id: res.data.id
+                    });
+                }
             })
+            // console.log(res.data)
+
 
             .catch(err => this.setState({
                 onSuccess: "",
