@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import "../DevSearch/DevSearch.css";
 import Footer from '../../components/Footer/Footer';
-//import DevCard from '../../components/DevCard/DevCard'
-//import DevSearchCards from '../../components/DevSearchCards/DevSearchCards';
 import API from "../../utils/API";
 import DevSearchBar from "../../components/DevSearchBar/DevSearchBar";
 
-import { DevSearchList, DevCard } from "../../components/List";
+import { DevSearchList } from "../../components/Devcard/DevCard";
 import { Link } from "react-router-dom";
 
 
@@ -57,37 +55,33 @@ class DevSearch extends Component {
         return (
             <React.Fragment>
 
+                <DevSearchBar />
+
+                <div className='devsearch-row'>
 
 
-                <div className='row'>
-                    <DevSearchBar />
-                    <div className='column'>
-
-
-                        {this.state.devs.length ? (
-                            <DevSearchList>
-                                {this.state.devs.map(dev => (
-                                    <DevCard key={dev._id}>
-                                        <Link to={"/devs/" + dev._id}>
-                                            <h1 className="dev-name">
-                                                {dev.username}
-                                                <div>{dev.email}</div>
-                                            </h1>
-                                            <ul className="dev-link-info">
+                    {this.state.devs.length ? (
+                        <DevSearchList>
+                            {this.state.devs.map(dev => (
+                                <ul className="dev-link-info">
+                                    <Link className="devsearch-anchor-link" to={"/devs/" + dev._id}>
+                                        <h1 className="devsearch-name">
+                                            {dev.username}
+                                        </h1>
+                                    </Link>
+                                    <h2 className="devsearch-email"><a className="devsearch-anchor" href={"mailto:" + dev.email}>{dev.email}</a></h2>
 
 
 
-                                            </ul>
 
-                                        </Link>
-                                        {/* <DeleteBtn onClick={() => this.deleteBook(book._id)} /> */}
-                                    </DevCard>
-                                ))}
-                            </DevSearchList>
-                        ) : (
-                                <h3>No Results to Display</h3>
-                            )}
-                    </div>
+                                    {/* <DeleteBtn onClick={() => this.deleteBook(book._id)} /> */}
+                                    {/* </DevCard> */}
+                                </ul>
+                            ))}
+                        </DevSearchList>
+                    ) : (
+                            <h3>No Results to Display</h3>
+                        )}
 
                 </div>
                 <Footer />

@@ -63,7 +63,7 @@ class EditUser extends Component {
                 <Form className="edit-card">
                     <FormGroup className="edit-user-dev-card">
                         <div alt="dev card background" className="edit-dev-card-back-img" >
-                            <img src={profilePic} alt="dev profile image" className="edit-user-dev-card-img" />
+                            <img src={profilePic} alt="dev profile" className="edit-user-dev-card-img" />
                             <div className="username-edit-user-page">
                                 {this.props.username}
                             </div>

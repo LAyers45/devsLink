@@ -1,7 +1,7 @@
 import React from "react";
 import "./Project.css";
 import Footer from '../../components/Footer/Footer';
-import ProjectCardView from '../../images/project-card-view.png'
+import ProjectCardView from '../../images/project-card-view.svg'
 
 
 

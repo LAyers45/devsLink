@@ -3,90 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-.user-dev-name{
-    cursor: default;
-    font-family: 'Comfortaa', cursive;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    letter-spacing: 3px;
-    margin-right: -3px;
-    margin-bottom: 5rem;
-    margin-top: 1.5rem;
-    text-align: center;
-    color: #5a6f47;
-    position: relative;
-}
-.user-dev-card-wrapper{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 1.5% 0;
-}
-.user-dev-card{
-    background-color: #282c34;
-    border-radius: 3%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    box-shadow: .5rem .5rem 3rem #add8ff;
-}
-.user-dev-card-back-img{
-    -webkit-clip-path: inset(0 0 29% 0);
-    clip-path: inset(0 0 26% 0);
-    width: 16rem;
-    background-image: linear-gradient(#282c34, #add8ff);
-    margin-top: 1rem;
-    border-top-left-radius: 14%;
-    border-top-right-radius: 14%;
-}
-.user-dev-card-img{
-    margin-top: -19rem;
-    border-radius: 50%;
-    width: 10rem;
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-}
-.user-dev-link-info{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    align-content: center;
-    align-items: center;
-    margin-top: -3rem;
-    list-style: none;
-    padding: 0 10%;
-}
-.user-dev-link-info li a:hover{
-    color: white;
-    text-decoration: none;
-}
-.user-dev-email{
-    color: #add8ff;
-    font-family: 'Comfortaa', cursive;
-    font-size: 1em;
-}
-.user-dev-github{
-    color: #add8ff;
-    font-family: 'Comfortaa', cursive;
-    font-size: 1em;
-}
-.user-dev-website{
-    color: #add8ff;
-    font-family: 'Comfortaa', cursive;
-    font-size: 1em;
-}
-.user-dev-language{
-    cursor: default;
-    color: #add8ff;
-    font-family: 'Comfortaa', cursive;
-    font-size: 1em;
-}
-#buttonEdit{
-    width: 45%;
-    margin: 6% 0;
-}
+
+
+
+
+
+
+
+
+
+

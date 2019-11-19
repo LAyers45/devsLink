@@ -1,9 +1,84 @@
-  .dev-search-row{
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  .devsearch-row{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    justify-content:center;;
   }
+  .dev-link-info{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #282c34;
+    border-radius: 10px;
+    box-shadow: .5rem .5rem 3rem #add8ff;
+    margin: 1%;
+    width: 40%;
+  }
+  .devsearch-name{
+    display: flex;
+    cursor: pointer;
+    font-family: 'Comfortaa', cursive;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #5a6f47;
+    padding: 3%;
+    margin-top: 3%;
+  }
+  .devsearch-email{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   align-content: center;
+   align-items: center;
+   justify-content: space-around;
+  }
+  .devsearch-email:hover{
+    color: white;
+  }
+  .devsearch-anchor{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    color: #add8ff;
+    font-family: 'Comfortaa', cursive;
+    font-size: 50%;
+  }
+  .devsearch-anchor:hover{
+   color: white;
+   text-decoration: none;
+  }
+  .devsearch-anchor-link{
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: .75em;
+  }
+  .devsearch-anchor-link:hover{
+    text-decoration: none;
+  }
+  .devsearch-name:hover{
+   color: #a6cc85;
+   text-decoration: none;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .dev-link-info{
+      width: 90%;
+    }
+  }
+
 
 
