@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import "./Main.css";
 import { Redirect } from "react-router-dom"
 import Footer from '../../components/Footer/Footer';
-import DevSearch from '../../images/dev-search.png';
-import DevWorks from '../../images/dev-works.png';
-import UserProfile from '../../images/user-profile.png';
-import Project from '../../images/project.png';
+import DevSearch from '../../images/dev-search.svg';
+import DevWorks from '../../images/dev-works.svg';
+import UserProfile from '../../images/user-profile.svg';
+import Project from '../../images/project.svg';
 
 
 class MainPage extends Component {
@@ -29,10 +29,10 @@ class MainPage extends Component {
 
                 <div className='main-page-container'>
                     <div className='main-page-row'>
+                        <a href="/devsearch">  <img src={DevSearch} className="cards" id="cardUser" alt="dev search" /></a>
 
                         <a href="/devworks"> <img src={DevWorks} className="cards" id="cardWorks" alt="dev works" /></a>
 
-                        <a href="/devsearch">  <img src={DevSearch} className="cards" id="cardUser" alt="dev search" /></a>
 
                         <a href="/user">  <img src={UserProfile} className="cards" id="cardUser" alt="profile" /></a>
 

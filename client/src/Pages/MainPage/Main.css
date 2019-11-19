@@ -1,7 +1,7 @@
 .cards{
     animation: card 1250ms ease forwards;
     transition: 0.5s ease;
-    width: 15rem;
+    width:19rem;
 }
 @keyframes card{
     from{ transform: translateX(-300%)}
@@ -23,7 +23,7 @@
     align-content: center;
     align-items: center;
     justify-content: space-evenly;
-    margin: 3% 0;
+    margin: 1% 0;
 }
 
 

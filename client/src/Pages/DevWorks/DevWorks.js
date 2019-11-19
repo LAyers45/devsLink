@@ -1,7 +1,7 @@
 import React from "react";
 import "./DevWorks.css";
 import Footer from '../../components/Footer/Footer';
-import HardCodeProjectCard from '../../images/hard-code-project-card.png';
+import HardCodeProjectCard from '../../images/hard-code-project-card.svg';
 
 
 

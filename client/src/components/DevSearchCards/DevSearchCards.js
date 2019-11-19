@@ -28,16 +28,17 @@ class DevSearchCards extends Component {
                 <div className="section">
                     <div className="dev-card-wrapper">
                         <div className="dev-card">
-                            <img src={DevCardBackGround} alt="dev card background" className="dev-card-back-img" />
-                            <img src={ProfileImage} alt="dev profile image" className="dev-card-img" />
-                            <h1 className="dev-name">
-                                DonRiche
+                            {/* <div className="dev-card-back-img">
+                                <img src={ProfileImage} alt="dev profile image" className="dev-card-img" />
+                                <h1 className="dev-name">
+                                    DonRiche
                                     </h1>
-                            <ul className="dev-link-info">
+                            </div> */}
+                            {/* <ul className="dev-link-info">
                                 <h2>{this.props.name}</h2>
                                 <h3>{this.props.email}</h3>
 
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
                 </div>
