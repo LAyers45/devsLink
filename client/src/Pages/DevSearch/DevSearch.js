@@ -4,7 +4,7 @@ import Footer from '../../components/Footer/Footer';
 import API from "../../utils/API";
 import DevSearchBar from "../../components/DevSearchBar/DevSearchBar";
 
-import { DevSearchList } from "../../components/Devcard/DevCard";
+import { DevSearchList } from "../../components/DevCard/DevCard";
 import { Link } from "react-router-dom";
 
 
@@ -19,7 +19,7 @@ class DevSearch extends Component {
         email: "",
         sort: "",
         searchField: "",
-        isLoaded: false,
+        isLoaded: false
     };
 
     componentDidMount() {
